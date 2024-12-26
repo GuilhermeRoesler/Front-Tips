@@ -1,0 +1,84 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: #5f6975;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+nav .menu>li {
+    display: inline-block;
+    margin-left: -5px;
+}
+
+nav a {
+    margin: 0;
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #5f6975;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+nav li:hover>a {
+    background-color: #2f95c8;
+    cursor: pointer;
+}
+
+nav .submenu,
+nav .submenu2,
+nav .submenu3 {
+    position: absolute;
+    display: none;
+}
+
+nav .submenu li {
+    position: relative;
+    border-top: 1px solid #575f6a;
+    border-bottom: 1px solid #6b727c;
+}
+
+nav .submenu2,
+nav .submenu3 {
+    top: 0;
+    left: 100%;
+}
+
+nav .menu>li:hover .submenu,
+nav .submenu>li:hover .submenu2,
+nav .submenu2>li:hover .submenu3 {
+    display: block;
+}
+
+nav .arrow {
+    display: inline-block;
+    border: 2px solid white;
+    width: 8px;
+    height: 8px;
+    border-left: none;
+    border-bottom: none;
+    position: relative;
+    right: 0;
+    margin-left: 10px;
+}
+
+nav .arrow.arrowDown {
+    transform: rotateZ(135deg) translate(0px, 3px);
+}
+
+nav .arrow.arrowRight {
+    transform: rotateZ(45deg);
+}
