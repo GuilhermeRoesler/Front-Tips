@@ -1,3 +1,5 @@
 # Learning Front End
 
-learning front end is a repository to backup all important css files so that it can be used once again in the future
+> this is a test repository
+
+Learning frontend is a repository to backup all important css files so they can be used again in future
