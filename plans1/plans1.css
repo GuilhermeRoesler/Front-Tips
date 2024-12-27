@@ -183,27 +183,27 @@ li {
     --button-hover: lime;
 }
 
-/* 
-  .plan--pram::before {
+
+/* .plan--pram::before {
     background-color: var(--clr-yellow-300);
-  }
-  
-  .plan--bike::before {
+}
+
+.plan--bike::before {
     background-color: var(--clr-purple-300);
-  }
-  
-  .plan--rocket::before {
+}
+
+.plan--rocket::before {
     background-color: var(--clr-cyan-300);
-  }
-  
-  .plan--pram .plan__icon {
+}
+
+.plan--pram .plan__icon {
     fill: var(--clr-yellow-400);
-  }
-  
-  .plan--bike .plan__icon {
+}
+
+.plan--bike .plan__icon {
     fill: var(--clr-purple-400);
-  }
-  
-  .plan--rocket .plan__icon {
+}
+
+.plan--rocket .plan__icon {
     fill: var(--clr-cyan-400);
-  } */
+} */
