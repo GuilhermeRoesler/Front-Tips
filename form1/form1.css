@@ -68,6 +68,8 @@ a:hover {
 .login-header span {
     font-size: 30px;
     color: var(--black-color);
+    user-select: none;
+    pointer-events: none;
 }
 
 .login-header::before {
@@ -169,6 +171,10 @@ a:hover {
 
 .register {
     text-align: center;
+}
+
+.register span {
+    user-select: none;
 }
 
 .register a {
