@@ -123,6 +123,7 @@ a:hover {
     left: 20px;
     transition: .2s;
     user-select: none;
+    /* pointer-events: none; */
 }
 
 .input-field:focus ~ .label,
