@@ -1,3 +1,14 @@
+:root {
+    --clr-green-1: #198754;
+    --clr-green-2: #12663f;
+    --clr-white-1: #acacac;
+    --clr-white-2: #d4d4d4;
+    --clr-background: rgb(240, 240, 240);
+    --shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.623);
+    --clr-text-black: black;
+    --clr-text-white: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +16,10 @@
 }
 
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--clr-background);
 }
 
 .header {
-    /* background-color: rgb(32, 31, 37); */
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -19,24 +29,24 @@ body {
 .dropdown button {
     padding: 10px 15px;
     cursor: pointer;
-    background-color: #198754;
+    background-color: var(--clr-green-1);
     border: none;
-    color: white;
+    color: var(--clr-text-white);
 }
 
 .dropdown a {
     display: block;
     padding: 10px 15px;
-    color: black;
+    color: var(--clr-text-black);
     text-decoration: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #d4d4d4;
+    background-color: var(--clr-white-2);
     min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.623);
+    box-shadow: var(--shadow);
 }
 
 .dropdown:hover .dropdown-content {
@@ -44,10 +54,10 @@ body {
 }
 
 .dropdown:hover button {
-    background-color: #12663f;
+    background-color: var(--clr-green-2);
 }
 
 .dropdown a:hover {
-    background-color: #acacac;
+    background-color: var(--clr-white-1);
     cursor: pointer;
 }
