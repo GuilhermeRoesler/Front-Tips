@@ -192,3 +192,35 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
+
+/* DETAILS AND SUMMARY */
+
+
+
+/* AUTO HIDE */
+
+#auto-hide>div {
+    margin: 0 auto;
+    width: min(500px, 100%);
+    padding: 1.5em;
+
+    background-color: var(--clr-gray-1);
+    color: white;
+    cursor: pointer;
+    transition: 150ms ease;
+
+    display: grid;
+    grid-template-rows: 1.5em 0fr;
+}
+
+#auto-hide p {
+    margin-top: 2.5em;
+}
+
+#auto-hide>div>div:last-child {
+    overflow: hidden;
+}
+
+.open {
+    grid-template-rows: 1.5em 1fr !important;
+}
