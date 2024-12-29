@@ -557,3 +557,52 @@ gradient-text-button>button:focus {
 #glowing-animated-border>div>div::after {
     filter: blur(3.5em);
 }
+
+/* ELEMENT LEFT HAS */
+
+#element-left-has {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    padding-inline: 10%;
+}
+
+#element-left-has .item {
+    transition: .5s;
+    filter: brightness(0);
+    padding: .5em;
+}
+
+#element-left-has .item:hover {
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+#element-left-has .item:hover + * {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+#element-left-has .item:hover + * + * {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+#element-left-has .item:hover + * + * + * {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+#element-left-has .item:has(+ *:hover) {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+#element-left-has .item:has(+ * + *:hover) {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+#element-left-has .item:has(+ * + * + *:hover) {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg);
+}
