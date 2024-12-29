@@ -145,7 +145,7 @@ input[type="range"]::-moz-range-thumb {
 
 #inset1>div,
 #inset2>div {
-    border: 3px solid white;
+    border: 3px solid var(--clr-light-gray-1);
     height: 300px;
     width: 300px;
     color: white;
@@ -183,4 +183,12 @@ input[type="range"]::-moz-range-thumb {
 #overflow-y>div>h3 {
     color: white;
     margin-bottom: .3em;
+}
+
+/* ICON SHADOW */
+
+#icon-shadow>i {
+    font-size: 7em;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
