@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --clr-black-1: #1b2227;
+    --clr-blue-1: #0066ff;
+    --clr-pink-1: #ff32d6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+body>h1 {
+    text-align: center;
+    padding: 100px;
+}
+
+section {
+    background-color: var(--clr-red);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* GRADIENT BUTTON */
+
+#gradient-button1>button,
+#gradient-button2>button {
+    padding: 1.5rem 3.5rem;
+    cursor: pointer;
+    background-color: var(--clr-black-1);
+    border: none;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+#gradient-button1>button::after {
+    content: '';
+    background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: .1em;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
+#gradient-button2 button {
+    border: .1em solid transparent;
+    border-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1)) 1;
+}
