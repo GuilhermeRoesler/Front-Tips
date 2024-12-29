@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
+    /* COLORS */
+    --clr-surface: #121212;
     --clr-black-1: #1b2227;
     --clr-blue-1: #0066ff;
     --clr-pink-1: #ff32d6;
@@ -24,6 +26,7 @@ html {
 
 body {
     margin-bottom: 100px;
+    /* background-color: var(--clr-surface); */
 }
 
 body>h1 {
@@ -42,6 +45,11 @@ section {
     height: auto;
     display: flex;
     justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 /* GRADIENT BUTTON */
@@ -235,6 +243,8 @@ input[type="range"]::-moz-range-thumb {
 /* CLIP PATH */
 
 #clip-path>img {
+    width: auto;
+    height: auto;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
@@ -246,6 +256,12 @@ input[type="range"]::-moz-range-thumb {
     background-color: var(--clr-gray-1);
     margin: 0 15px;
     position: relative;
+    padding: 2.2em 1.4em 4.5em 1.4em;
+    border-radius: 4px;
+}
+
+#data-attribute>div>img {
+    border-radius: 7px;
 }
 
 #data-attribute>div::before {
@@ -260,4 +276,40 @@ input[type="range"]::-moz-range-thumb {
     padding: .5em 2em;
     border-radius: 100px;
     text-transform: uppercase;
+}
+
+#data-attribute>div::after {
+    content: 'Web Design, Learn the 'attr(data-level)' web design here!';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% -15px;
+    width: 80%;
+    text-align: center;
+}
+
+/* CONIC GRADIENT */
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#conic-gradient>div {
+    height: 400px;
+    width: 400px;
+
+    border: 10px solid transparent;
+    border-image: conic-gradient(from var(--angle),red, blue, red) 1;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
