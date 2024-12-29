@@ -11,6 +11,8 @@
     --clr-light-gray-1: #a3abbf;
     --clr-yellow-1: #ffdd00;
     --clr-yellow-2: #ffdd0035;
+    --clr-white-1: white;
+    --clr-white-2: #eeeeee;
 }
 
 * {
@@ -107,7 +109,8 @@ img {
     margin-bottom: 20px;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     accent-color: var(--clr-red-1);
     width: 20px;
     height: 20px;
@@ -210,7 +213,25 @@ input[type="range"]::-moz-range-thumb {
 
 /* DETAILS AND SUMMARY */
 
+#details-and-summary>details>summary {
+    padding: 0.6em;
+    width: 200px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 2px var(--clr-light-gray-1);
+    cursor: pointer;
+}
 
+#details-and-summary>details>p {
+    background-color: var(--clr-white-2);
+    padding: 0.6em;
+    margin: 0;
+    box-shadow: 1px 1px 2px var(--clr-light-gray-1);
+}
+
+#details-and-summary>details:open {
+    background-color: red !important;
+}
 
 /* AUTO HIDE */
 
@@ -258,6 +279,7 @@ input[type="range"]::-moz-range-thumb {
     position: relative;
     padding: 2.2em 1.4em 4.5em 1.4em;
     border-radius: 4px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #data-attribute>div>img {
@@ -278,14 +300,23 @@ input[type="range"]::-moz-range-thumb {
     text-transform: uppercase;
 }
 
+@media (prefers-color-scheme: light) {
+    #data-attribute>div::before {
+        background-color: #000000ce;
+        border: 1px solid white;
+        color: white;
+    }
+}
+
 #data-attribute>div::after {
-    content: 'Web Design, Learn the 'attr(data-level)' web design here!';
+    content: 'Web Design, Learn the ' attr(data-level)' web design here!';
     position: absolute;
     bottom: 0;
     left: 50%;
     translate: -50% -15px;
     width: 80%;
     text-align: center;
+    color: white;
 }
 
 /* CONIC GRADIENT */
@@ -301,7 +332,7 @@ input[type="range"]::-moz-range-thumb {
     width: 400px;
 
     border: 10px solid transparent;
-    border-image: conic-gradient(from var(--angle),red, blue, red) 1;
+    border-image: conic-gradient(from var(--angle), red, blue, red) 1;
     animation: 1s spin linear infinite;
 }
 
@@ -309,6 +340,7 @@ input[type="range"]::-moz-range-thumb {
     from {
         --angle: 0deg;
     }
+
     to {
         --angle: 360deg;
     }
