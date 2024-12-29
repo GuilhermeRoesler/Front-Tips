@@ -321,18 +321,28 @@ input[type="range"]::-moz-range-thumb {
 /* DATA ATTRIBUTE */
 
 #data-attribute>div {
-    height: 350px;
+    height: 400px;
     width: 400px;
     background-color: var(--clr-gray-1);
     margin: 0 15px;
     position: relative;
-    padding: 2.2em 1.4em 4.5em 1.4em;
+    padding: 2.3em 1.4em 1em 1.4em;
     border-radius: 4px;
     box-shadow: var(--shadow-main);
 }
 
 #data-attribute>div>img {
     border-radius: 7px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#data-attribute>div>h2,
+#data-attribute>div>p {
+    text-align: center;
+    margin-block: 0.6em;
+    color: white;
 }
 
 #data-attribute>div::before {
@@ -357,7 +367,7 @@ input[type="range"]::-moz-range-thumb {
     }
 }
 
-#data-attribute>div::after {
+/* #data-attribute>div::after {
     content: 'Web Design, Learn the ' attr(data-level)' web design here!';
     position: absolute;
     bottom: 0;
@@ -366,7 +376,7 @@ input[type="range"]::-moz-range-thumb {
     width: 80%;
     text-align: center;
     color: white;
-}
+} */
 
 /* CONIC GRADIENT */
 
