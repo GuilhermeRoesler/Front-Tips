@@ -5,9 +5,11 @@
     --clr-surface: #121212;
     --clr-black-1: #1b2227;
     --clr-blue-1: #0066ff;
+    --clr-blue-2: #569aff;
     --clr-pink-1: #ff32d6;
     --clr-red-1: #e53935;
     --clr-gray-1: #282a32;
+    --clr-gray-2: hsl(0, 0%, 25%);
     --clr-light-gray-1: #a3abbf;
     --clr-yellow-1: #ffdd00;
     --clr-yellow-2: #ffdd0035;
@@ -57,6 +59,23 @@ img {
 
 button:active {
     transform: scale(.96);
+}
+
+code {
+    background-color: #444444;
+    padding: 5px 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* COUNTERS */
+
+h1 {
+    counter-increment: h1-counter;
+}
+
+h1::before {
+    content: counter(h1-counter) '. ';
 }
 
 /* GRADIENT BUTTON */
@@ -414,4 +433,67 @@ gradient-text-button>button:focus {
     100% {
         background-image: linear-gradient(to right, var(--clr-pink-1), var(--clr-blue-1));
     }
+}
+
+/* ISOLATION */
+
+#isolation {
+    background-color: var(--clr-gray-1);
+    color: white;
+}
+
+#isolation>div {
+    position: relative;
+    isolation: isolate;
+    padding: 3em;
+}
+
+#isolation>div::before {
+    content: open-quote;
+    font-family: serif;
+    font-weight: 900;
+    font-size: 15rem;
+    color: #686868;
+    position: absolute;
+    top: -3rem;
+    left: -2.5rem;
+    z-index: -1;
+}
+
+#isolation>div::after {
+    content: no-close-quote;
+}
+
+/* FILTERS */
+
+.card {
+    background-color: var(--clr-gray-2);
+    width: 400px;
+    height: 350px;
+    margin: 0 15px;
+    position: relative;
+    padding: 1em 1.4em 4.5em 1.4em;
+    border-radius: .5rem;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card a {
+    color: var(--clr-blue-2);
+    font-size: 1.3rem;
+}
+
+.card img {
+    height: 80%;
+    margin: 1em 0;
+    filter: grayscale(100%) contrast(200%);
+    transition: filter 400ms ease;
+}
+
+.card p {
+    color: white;
+    text-align: center;
+}
+
+.card:hover img {
+    filter: grayscale(0%) contrast(100%);
 }
