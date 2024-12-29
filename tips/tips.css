@@ -15,6 +15,8 @@
     --clr-yellow-2: #ffdd0035;
     --clr-white-1: white;
     --clr-white-2: #eeeeee;
+
+    --shadow-main: 3px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -326,7 +328,7 @@ input[type="range"]::-moz-range-thumb {
     position: relative;
     padding: 2.2em 1.4em 4.5em 1.4em;
     border-radius: 4px;
-    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-main);
 }
 
 #data-attribute>div>img {
@@ -395,18 +397,26 @@ input[type="range"]::-moz-range-thumb {
 
 /* GRADIENT TEXT BUTTON */
 
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 #gradient-text-button>button {
     padding: 1.5rem 3.5rem;
     border: none;
     color: white;
     font-size: 1.5rem;
-    background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
+    background-image: conic-gradient(from var(--gradient-angle), var(--clr-blue-1), var(--clr-pink-1), var(--clr-blue-1));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     cursor: pointer;
-    transition: .1s ease;
+    transition: .3s ease;
+    box-shadow: var(--shadow-main), 40px 0 100px var(--clr-pink-1), -40px 0 100px var(--clr-blue-1);
+    animation: color-change 2s linear infinite;
 }
 
 #gradient-text-button>button::before {
@@ -422,16 +432,17 @@ input[type="range"]::-moz-range-thumb {
 
 #gradient-text-button>button:hover,
 gradient-text-button>button:focus {
-    animation: color-change 4s forwards;
+    font-size: 1.7rem;
+    box-shadow: var(--shadow-main), 150px 0 100px var(--clr-pink-1), -150px 0 100px var(--clr-blue-1);
 }
 
 @keyframes color-change {
     0% {
-        background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
+        --gradient-angle: 0deg;
     }
 
     100% {
-        background-image: linear-gradient(to right, var(--clr-pink-1), var(--clr-blue-1));
+        --gradient-angle: 360deg;
     }
 }
 
@@ -452,11 +463,10 @@ gradient-text-button>button:focus {
     content: open-quote;
     font-family: serif;
     font-weight: 900;
-    font-size: 15rem;
+    font-size: 10rem;
     color: #686868;
     position: absolute;
-    top: -3rem;
-    left: -2.5rem;
+    inset: 0 50%;
     z-index: -1;
 }
 
@@ -474,12 +484,13 @@ gradient-text-button>button:focus {
     position: relative;
     padding: 1em 1.4em 4.5em 1.4em;
     border-radius: .5rem;
-    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-main);
 }
 
 .card a {
     color: var(--clr-blue-2);
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .card img {
@@ -487,6 +498,7 @@ gradient-text-button>button:focus {
     margin: 1em 0;
     filter: grayscale(100%) contrast(200%);
     transition: filter 400ms ease;
+    cursor: pointer;
 }
 
 .card p {
@@ -494,6 +506,54 @@ gradient-text-button>button:focus {
     text-align: center;
 }
 
-.card:hover img {
+.card:hover img,
+.card:focus-within img {
     filter: grayscale(0%) contrast(100%);
+}
+
+/* @media (prefers-color-scheme: dark) {
+    .card img {
+        filter: grayscale(0%) contrast(100%) drop-shadow(0px 0px 1rem red) invert(100%);
+    }
+} */
+
+/* GLOWING ANIMATED BORDER */
+
+#glowing-animated-border>div {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+
+    background-color: var(--clr-2);
+    padding: 5em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    z-index: -1;
+}
+
+#glowing-animated-border>div>div {
+    height: 60vh;
+    aspect-ratio: 1 / 1.5;
+    background-color: var(--clr-1);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+#glowing-animated-border>div>div::before,
+#glowing-animated-border>div>div::after {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-4), var(--clr-3));
+    border-radius: inherit;
+    animation: color-change 10s linear infinite;
+}
+
+#glowing-animated-border>div>div::after {
+    filter: blur(3.5em);
 }
