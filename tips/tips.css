@@ -31,9 +31,10 @@ body {
     /* background-color: var(--clr-surface); */
 }
 
-body>h1 {
+h1 {
     text-align: center;
     padding: 100px;
+    text-transform: capitalize;
 }
 
 /* body>h1::before,
