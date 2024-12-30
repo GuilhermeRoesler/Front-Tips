@@ -341,7 +341,7 @@ input[type="range"]::-moz-range-thumb {
 #data-attribute>div>h2,
 #data-attribute>div>p {
     text-align: center;
-    margin-block: 0.6em;
+    margin-block: 0.5em;
     color: white;
 }
 
@@ -615,4 +615,39 @@ gradient-text-button>button:focus {
 #element-left-has .item:has(+ * + * + *:hover) {
     filter: brightness(0.2);
     transform: translateZ(30px) rotateY(-10deg);
+}
+
+/* MIX BLEND MODE */
+
+#mix-blend-mode>div {
+    position: relative;
+    margin-inline: auto;
+    width: 250px;
+    height: 150px;
+}
+
+#mix-blend-mode>div>div {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    mix-blend-mode: difference;
+}
+
+#mix-blend-mode>div>div:first-child {
+    background-color: red;
+    left: 0;
+}
+
+#mix-blend-mode>div>div:last-child {
+    background-color: green;
+    translate: -17%;
+    left: 50%;
+}
+
+/* EDITABLE ELEMENT */
+
+#editable-element>div {
+    width: 40%;
 }
