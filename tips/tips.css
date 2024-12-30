@@ -15,6 +15,10 @@
     --clr-yellow-2: #ffdd0035;
     --clr-white-1: white;
     --clr-white-2: #eeeeee;
+    --clr-green-1: #79ffe9;
+    --clr-green-2: #cafff6;
+    --text-color: black;
+    --text-color-secondary: white;
 
     --shadow-main: 3px 10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -650,4 +654,47 @@ gradient-text-button>button:focus {
 
 #editable-element>div {
     width: 40%;
+}
+
+/* NTH CHILD PSEUDO CLASS */
+
+#nth-child-pseudo-class>div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .5em;
+}
+
+.nth-child-pseudo-class-item {
+    border: 1px solid var(--clr-black-1);
+    font-size: 1.25em;
+    padding: 1.2em;
+    text-align: center;
+    aspect-ratio: 1;
+    background-color: var(--clr-green-2);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.active1>div>div:nth-child(9) {
+    background-color: var(--clr-green-1);
+}
+
+.active2>div>div:nth-child(odd) {
+    background-color: var(--clr-green-1);
+}
+
+.active3>div>div:nth-child(even) {
+    background-color: var(--clr-green-1);
+}
+
+.active4>div>div:nth-child(n) {
+    background-color: var(--clr-green-1);
+}
+
+.active5>div>div:nth-child(3n) {
+    background-color: var(--clr-green-1);
+}
+
+.active6>div>div:nth-child(3n + 2) {
+    background-color: var(--clr-green-1);
 }
