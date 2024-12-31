@@ -40,6 +40,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    &:not(h1, h2) {
+        font: inherit;
+    }
 }
 
 html {
@@ -915,4 +918,38 @@ gradient-text-button>button:focus {
 
 #subgrid>div>p {
     font-size: .8rem;
+}
+
+/* USER VALID FORM */
+
+#user-valid-form>form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--clr-white-3);
+    border-radius: .5rem;
+    box-shadow: var(--shadow-main);
+    padding: 2rem;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+#user-valid-form>form>label {
+}
+
+#user-valid-form>form>input {
+    background-color: var(--clr-white-3);
+    border: none;
+    outline: 2px solid #888;
+    margin-block: .5rem 2rem;
+    border-radius: .5rem;
+    height: 30px;
+    width: 300px;
+    padding-inline: .5rem 1rem;
+    font-weight: 500;
+    &:user-valid {
+        outline-color: #01a925;
+    }
+    &:user-invalid {
+        outline-color: #b51a1a;
+    }
 }
