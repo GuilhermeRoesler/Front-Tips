@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
+    interpolate-size: allow-keywords;
+
     /* COLORS */
     --clr-surface: #121212;
     --clr-black: black;
@@ -276,24 +278,39 @@ input[type="range"]::-moz-range-thumb {
 
 /* DETAILS AND SUMMARY */
 
-#details-and-summary>details>summary {
-    padding: 0.6em;
-    width: 200px;
-    background-color: white;
-    border: none;
-    box-shadow: 1px 1px 2px var(--clr-light-gray-1);
+details[open] > *:not(summary) {
+    background-color: red;
+    block-size: 0;
+}
+
+#details-and-summary>div>details {
+    background-color: hsl(0 0% 5%);
+    border: 1px solid hsl(0 0% 12%);
+    padding: .5em 1em;
+    border-radius: .25em;
+    overflow: hidden;
+    margin-block: 1em;
+    user-select: none;
+}
+
+#details-and-summary>div>details>summary {
+    color: hsl(0 0% 98%);
+    line-height: 1.3;
+    margin-inline-start: 1em;
+    list-style-position: outside;
+    font-size: 1rem;
     cursor: pointer;
 }
 
-#details-and-summary>details>p {
-    background-color: var(--clr-white-2);
-    padding: 0.6em;
-    margin: 0;
-    box-shadow: 1px 1px 2px var(--clr-light-gray-1);
+#details-and-summary>div>details>summary::marker {
+    font-size: .75em;
+    color: hsl(0 0% 40%);
 }
 
-#details-and-summary>details:open {
-    background-color: red !important;
+#details-and-summary>div>details>p {
+    padding-block: 1em;
+    color: hsl(0 0% 78%);
+    font-size: .8rem;
 }
 
 /* AUTO HIDE */
@@ -602,17 +619,17 @@ gradient-text-button>button:focus {
     transform: translateZ(200px);
 }
 
-#element-left-has .item:hover + * {
+#element-left-has .item:hover+* {
     filter: brightness(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-#element-left-has .item:hover + * + * {
+#element-left-has .item:hover+*+* {
     filter: brightness(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-#element-left-has .item:hover + * + * + * {
+#element-left-has .item:hover+*+*+* {
     filter: brightness(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
@@ -740,7 +757,7 @@ gradient-text-button>button:focus {
         height: calc(var(--size) * 5);
         background-color: var(--clr-pink-1);
     }
-    
+
     50% {
         height: var(--size);
         background-color: var(--clr-purple-1);
@@ -819,7 +836,7 @@ gradient-text-button>button:focus {
     #modals>dialog[open] {
         opacity: 0;
     }
-    
+
     #modals>dialog[open]::backdrop {
         background-color: rgba(0, 0, 0, 0);
     }
