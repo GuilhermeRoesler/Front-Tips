@@ -50,3 +50,9 @@ modals.addEventListener("click", (event) => {
         modals.close();
     }
 });
+
+// INTERPOLATE SIZE
+
+function openInterpolateSize() {
+    document.querySelector("#interpolate-size>div>div").classList.toggle('height-auto')
+}

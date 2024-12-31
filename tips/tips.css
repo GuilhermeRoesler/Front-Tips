@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
-    interpolate-size: allow-keywords;
-
     /* COLORS */
     --clr-surface: #121212;
     --clr-black: black;
@@ -23,8 +21,13 @@
     --clr-yellow-2: #ffdd0035;
     --clr-white-1: white;
     --clr-white-2: #eeeeee;
-    --clr-green-1: #79ffe9;
-    --clr-green-2: #cafff6;
+    --clr-green-1: #052b2f;
+    --clr-green-2: #073438;
+    --clr-green-3: #0e4b50;
+    --clr-green-4: #2d8f85;
+    --clr-green-5: #637c54;
+    --clr-green-6: #79ffe9;
+    --clr-green-7: #cafff6;
     --text-color: black;
     --text-color-secondary: white;
 
@@ -40,6 +43,7 @@
 
 html {
     font-family: 'Poppins';
+    interpolate-size: allow-keywords;
 }
 
 body {
@@ -278,11 +282,6 @@ input[type="range"]::-moz-range-thumb {
 
 /* DETAILS AND SUMMARY */
 
-details[open] > *:not(summary) {
-    background-color: red;
-    block-size: 0;
-}
-
 #details-and-summary>div>details {
     background-color: hsl(0 0% 5%);
     border: 1px solid hsl(0 0% 12%);
@@ -311,6 +310,8 @@ details[open] > *:not(summary) {
     padding-block: 1em;
     color: hsl(0 0% 78%);
     font-size: .8rem;
+    height: 1lh;
+    transition: all 1s ease;
 }
 
 /* AUTO HIDE */
@@ -561,13 +562,7 @@ gradient-text-button>button:focus {
 /* GLOWING ANIMATED BORDER */
 
 #glowing-animated-border>div {
-    --clr-1: #052b2f;
-    --clr-2: #073438;
-    --clr-3: #0e4b50;
-    --clr-4: #2d8f85;
-    --clr-5: #637c54;
-
-    background-color: var(--clr-2);
+    background-color: var(--clr-green-2);
     padding: 5em;
     width: 100%;
     height: 100%;
@@ -579,7 +574,7 @@ gradient-text-button>button:focus {
 #glowing-animated-border>div>div {
     height: 60vh;
     aspect-ratio: 1 / 1.5;
-    background-color: var(--clr-1);
+    background-color: var(--clr-green-1);
     border-radius: 0.5rem;
     position: relative;
 }
@@ -590,7 +585,7 @@ gradient-text-button>button:focus {
     position: absolute;
     inset: -.5rem;
     z-index: -1;
-    background: conic-gradient(from var(--gradient-angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-4), var(--clr-3));
+    background: conic-gradient(from var(--gradient-angle), var(--clr-green-3), var(--clr-green-4), var(--clr-green-5), var(--clr-green-4), var(--clr-green-3));
     border-radius: inherit;
     animation: color-change 10s linear infinite;
 }
@@ -698,33 +693,33 @@ gradient-text-button>button:focus {
     padding: 1.2em;
     text-align: center;
     aspect-ratio: 1;
-    background-color: var(--clr-green-2);
+    background-color: var(--clr-green-7);
     color: var(--text-color);
     font-weight: 600;
 }
 
 .active1>div>div:nth-child(9) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 .active2>div>div:nth-child(odd) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 .active3>div>div:nth-child(even) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 .active4>div>div:nth-child(n) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 .active5>div>div:nth-child(3n) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 .active6>div>div:nth-child(3n + 2) {
-    background-color: var(--clr-green-1);
+    background-color: var(--clr-green-6);
 }
 
 /* LOADER */
@@ -801,11 +796,11 @@ gradient-text-button>button:focus {
     border-radius: 50%;
     transition: .3s ease;
     box-shadow: var(--shadow-2);
-}
 
-#modals>button:hover {
-    font-size: 1.7rem;
-    background-color: rgba(125, 18, 255, 0.208);
+    &:hover {
+        font-size: 1.4rem;
+        background-color: rgba(125, 18, 255, 0.208);
+    }
 }
 
 #modals>dialog {
@@ -857,4 +852,35 @@ gradient-text-button>button:focus {
     /* float: right; */
     margin-left: auto;
     display: block;
+}
+
+/* INTERPOLATE SIZE */
+
+#interpolate-size>div>button {
+    background-color: var(--clr-green-4);
+    border: none;
+    font-size: 1.1rem;
+    border-radius: .2em;
+    padding: .5em 1em;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+}
+
+#interpolate-size>div>div {
+    background-color: var(--clr-green-3);
+    padding: .5em 1em;
+    color: var(--text-color-secondary);
+    line-height: 2;
+    margin-top: .3em;
+    border-radius: .2em;
+
+    height: 2lh;
+    overflow-y: clip;
+
+    transition: height .3s;
+    interpolate-size: allow-keywords;
+}
+
+.height-auto {
+    height: auto !important;
 }
