@@ -7,6 +7,7 @@
     --clr-blue-1: #0066ff;
     --clr-blue-2: #569aff;
     --clr-pink-1: #ff32d6;
+    --clr-purple-1: #9c73f8;
     --clr-red-1: #e53935;
     --clr-gray-1: #282a32;
     --clr-gray-2: hsl(0, 0%, 25%);
@@ -697,4 +698,61 @@ gradient-text-button>button:focus {
 
 .active6>div>div:nth-child(3n + 2) {
     background-color: var(--clr-green-1);
+}
+
+/* LOADER */
+
+#loader {
+    font-family: system-ui;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+
+#loader>.loader {
+    --size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--size) / 2);
+    height: calc(var(--size) * 5);
+}
+
+#loader>.loader>div {
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    background-color: var(--clr-yellow-1);
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    25% {
+        height: calc(var(--size) * 5);
+        background-color: var(--clr-pink-1);
+    }
+    
+    50% {
+        height: var(--size);
+        background-color: var(--clr-purple-1);
+    }
+}
+
+#loader>.loader>div:nth-child(2) {
+    animation-delay: .2s;
+}
+
+#loader>.loader>div:nth-child(3) {
+    animation-delay: .4s;
+}
+
+#loader>.loader>div:nth-child(4) {
+    animation-delay: .6s;
+}
+
+#loader>.loader>div:nth-child(5) {
+    animation-delay: .8s;
+}
+
+#loader>.loader>div:nth-child(6) {
+    animation-delay: 1s;
 }
