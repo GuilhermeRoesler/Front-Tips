@@ -3,7 +3,12 @@
 :root {
     /* COLORS */
     --clr-surface: #121212;
+    --clr-black: black;
     --clr-black-1: #1b2227;
+    --clr-black-transparent-1: rgba(0, 0, 0, 0.8);
+    --clr-black-transparent-2: rgba(0, 0, 0, 0.6);
+    --clr-black-transparent-3: rgba(0, 0, 0, 0.4);
+    --clr-black-transparent-4: rgba(0, 0, 0, 0.2);
     --clr-blue-1: #0066ff;
     --clr-blue-2: #569aff;
     --clr-pink-1: #ff32d6;
@@ -22,6 +27,7 @@
     --text-color-secondary: white;
 
     --shadow-main: 3px 10px 10px rgba(0, 0, 0, 0.5);
+    --shadow-2: 3px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -32,7 +38,6 @@
 
 html {
     font-family: 'Poppins';
-    font-size: 16px;
 }
 
 body {
@@ -44,6 +49,10 @@ h1 {
     text-align: center;
     padding: 100px;
     text-transform: capitalize;
+}
+
+p {
+    max-width: 60ch;
 }
 
 /* body>h1::before,
@@ -585,6 +594,7 @@ gradient-text-button>button:focus {
     transition: .5s;
     filter: brightness(0);
     padding: .5em;
+    cursor: pointer;
 }
 
 #element-left-has .item:hover {
@@ -755,4 +765,79 @@ gradient-text-button>button:focus {
 
 #loader>.loader>div:nth-child(6) {
     animation-delay: 1s;
+}
+
+/* MODALS */
+
+#modals button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#modals>button {
+    font-size: 1.2rem;
+    padding: .8em;
+    aspect-ratio: 1;
+    font-weight: 700;
+    border: 2px solid var(--clr-black);
+    border-radius: 50%;
+    transition: .3s ease;
+    box-shadow: var(--shadow-2);
+}
+
+#modals>button:hover {
+    font-size: 1.7rem;
+    background-color: rgba(125, 18, 255, 0.208);
+}
+
+#modals>dialog {
+    position: fixed;
+    margin: auto;
+    padding: 2em;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-main);
+    opacity: 0;
+    transition: all .3s allow-discrete;
+}
+
+#modals>dialog[open] {
+    opacity: 1;
+}
+
+#modals>dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s allow-discrete;
+}
+
+#modals>dialog[open]::backdrop {
+    background-color: var(--clr-black-transparent-1);
+}
+
+@starting-style {
+    #modals>dialog[open] {
+        opacity: 0;
+    }
+    
+    #modals>dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+#modals>dialog>p {
+    max-width: 40ch;
+    margin-block: 1em;
+}
+
+#modals>dialog>button {
+    background-color: var(--clr-black);
+    color: var(--text-color-secondary);
+    padding: .5em 1em;
+    border-radius: .5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    /* float: right; */
+    margin-left: auto;
+    display: block;
 }
