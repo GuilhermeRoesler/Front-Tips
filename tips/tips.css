@@ -21,6 +21,7 @@
     --clr-yellow-2: #ffdd0035;
     --clr-white-1: white;
     --clr-white-2: #eeeeee;
+    --clr-white-3: #ccc;
     --clr-green-1: #052b2f;
     --clr-green-2: #073438;
     --clr-green-3: #0e4b50;
@@ -883,4 +884,35 @@ gradient-text-button>button:focus {
 
 .height-auto {
     height: auto !important;
+}
+
+/* SUBGRID */
+
+#subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding-inline: 5em;
+    font-size: 1rem;
+}
+
+#subgrid img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+#subgrid>div {
+    border: 1px solid var(--clr-white-3);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-main);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+#subgrid>div>p {
+    font-size: .8rem;
 }
