@@ -56,3 +56,27 @@ modals.addEventListener("click", (event) => {
 function openInterpolateSize() {
     document.querySelector("#interpolate-size1>div>div").classList.toggle('height-auto')
 }
+
+// GRID WRAPPING
+
+const gridWrapping = document.getElementById("grid-wrapping")
+
+for (let i = 0; i < 11; i++) {
+    let card = document.createElement("div")
+    card.classList.add("card")
+    
+    let child = document.querySelector("#grid-wrapping>div:first-child")
+    card.innerHTML = child.innerHTML
+    
+    gridWrapping.appendChild(card)
+}
+
+const sla = document.querySelector("h1:has(+ section#grid-wrapping)")
+console.log(sla)
+sla.addEventListener("click", () => {
+    gridWrapping.style.width = '250px'
+
+    setInterval(() => {
+        gridWrapping.style.width = '75%'
+    }, 4000);
+})

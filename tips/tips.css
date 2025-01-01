@@ -17,6 +17,7 @@
     --clr-gray-1: #282a32;
     --clr-gray-2: hsl(0, 0%, 25%);
     --clr-light-gray-1: #a3abbf;
+    --clr-light-gray-2: #4b525c;
     --clr-yellow-1: #ffdd00;
     --clr-yellow-2: #ffdd0035;
     --clr-white-1: white;
@@ -73,10 +74,11 @@ body>h1::after {
 
 section {
     background-color: var(--clr-red);
-    width: 100%;
+    width: 75%;
     height: auto;
     display: flex;
     justify-content: center;
+    margin-inline: auto;
 }
 
 img {
@@ -393,6 +395,7 @@ input[type="range"]::-moz-range-thumb {
     color: var(--clr-yellow-1);
     padding: .5em 2em;
     border-radius: 100px;
+    font-size: .8rem;
     text-transform: uppercase;
 }
 
@@ -523,7 +526,7 @@ gradient-text-button>button:focus {
 
 /* FILTERS */
 
-.card {
+#filters .card {
     background-color: var(--clr-gray-2);
     width: 400px;
     height: 350px;
@@ -534,13 +537,13 @@ gradient-text-button>button:focus {
     box-shadow: var(--shadow-main);
 }
 
-.card a {
+#filters .card a {
     color: var(--clr-blue-2);
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.card img {
+#filters .card img {
     height: 80%;
     margin: 1em 0;
     filter: grayscale(100%) contrast(200%);
@@ -548,18 +551,18 @@ gradient-text-button>button:focus {
     cursor: pointer;
 }
 
-.card p {
+#filters .card p {
     color: white;
     text-align: center;
 }
 
-.card:hover img,
-.card:focus-within img {
+#filters .card:hover img,
+#filters .card:focus-within img {
     filter: grayscale(0%) contrast(100%);
 }
 
 /* @media (prefers-color-scheme: dark) {
-    .card img {
+    #filters .card img {
         filter: grayscale(0%) contrast(100%) drop-shadow(0px 0px 1rem red) invert(100%);
     }
 } */
@@ -604,7 +607,7 @@ gradient-text-button>button:focus {
 #element-left-has {
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    padding-inline: 10%;
+    /* padding-inline: 10%; */
 }
 
 #element-left-has .item {
@@ -900,8 +903,7 @@ gradient-text-button>button:focus {
 #subgrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding-inline: 5em;
+    gap: 1.2rem;
     font-size: 1rem;
 }
 
@@ -933,82 +935,84 @@ gradient-text-button>button:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--clr-white-3);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-main);
-    padding: 2rem;
-    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 2.5rem;
+    font-weight: 600;
     font-size: 0.9rem;
-    background-color: var(--clr-white-1);
-    /* Add a subtle background */
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
     max-width: 400px;
-    margin: auto;
-    /* Center form */
+    margin: 2rem auto;
 }
 
 #user-valid-form>form>label {
     align-self: flex-start;
-    /* Align labels to the left */
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
-    color: var(--clr-text-primary);
-    /* Improve readability */
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 #user-valid-form>form>input {
-    background-color: var(--clr-white-2);
-    border: none;
-    outline: 2px solid #999;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    outline: none;
     margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
-    height: 40px;
+    border-radius: 0.75rem;
+    height: 48px;
     width: 100%;
-    /* Responsive width */
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     font-weight: 500;
     font-size: 1rem;
-    transition: outline-color 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #user-valid-form>form>input:focus {
-    outline-color: var(--clr-primary);
-    /* Use primary color on focus */
-    background-color: var(--clr-white-1);
+    border-color: var(--clr-blue-1);
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
 }
 
 #user-valid-form>form>input:user-valid {
-    outline-color: #01a925;
+    border-color: #01a925;
+    background-color: rgba(1, 169, 37, 0.02);
 }
 
 #user-valid-form>form>input:user-invalid {
-    outline-color: #b51a1a;
+    border-color: #b51a1a;
+    background-color: rgba(181, 26, 26, 0.02);
 }
 
+#user-valid-form>form>input:placeholder-shown:not(:focus):not(:placeholder-shown) {
+    border-color: #b51a1a;
+    background-color: rgba(181, 26, 26, 0.02);
+    box-shadow: 0 0 0 4px rgba(181, 26, 26, 0.1);
+}
+
+/* Add submit button styles */
 #user-valid-form>form>button {
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--clr-blue-1), var(--clr-blue-2));
+    color: white;
     border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    font-weight: 700;
-    font-size: 0.9rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #user-valid-form>form>button:hover {
-    background-color: var(--clr-primary-dark);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     #user-valid-form>form {
-        padding: 1rem;
-    }
-
-    #user-valid-form>form>input {
-        height: 35px;
+        padding: 1.5rem;
+        margin: 1rem;
     }
 }
 
@@ -1052,4 +1056,50 @@ gradient-text-button>button:focus {
 #interpolate-size2 svg {
     fill: #777;
     min-width: 24px;
+}
+
+/* GRID WRAPPING */
+
+h1:has(+ section#grid-wrapping) {
+    position: relative;
+    
+    &::after {
+        content: 'Preview';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% 70%;
+
+        background-color: #ffffff;
+        border: 1px solid #e1e1e1;
+        font-weight: 500;
+        font-family: system-ui;
+        border-radius: 0.75rem;
+        font-size: 1.3rem;
+        padding: .5em 1em;
+        cursor: pointer;
+    }
+}
+
+#grid-wrapping {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .5rem;
+    justify-content: center;
+    resize: horizontal;
+    overflow: auto;
+    transition: all 2s ease-in-out;
+}
+
+#grid-wrapping .card {
+    padding: 2em;
+    border: 1px solid var(--clr-light-gray-2);
+    border-radius: .8rem;
+    background-color: var(--clr-gray-1);
+    text-align: center;
+    color: var(--text-color-secondary);
+}
+
+#grid-wrapping p {
+    font-size: .8rem;
 }
