@@ -54,5 +54,5 @@ modals.addEventListener("click", (event) => {
 // INTERPOLATE SIZE
 
 function openInterpolateSize() {
-    document.querySelector("#interpolate-size>div>div").classList.toggle('height-auto')
+    document.querySelector("#interpolate-size1>div>div").classList.toggle('height-auto')
 }

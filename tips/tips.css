@@ -858,9 +858,9 @@ gradient-text-button>button:focus {
     display: block;
 }
 
-/* INTERPOLATE SIZE */
+/* INTERPOLATE SIZE 1 */
 
-#interpolate-size>div>button {
+#interpolate-size1>div>button {
     background-color: var(--clr-green-4);
     border: none;
     font-size: 1.1rem;
@@ -870,7 +870,7 @@ gradient-text-button>button:focus {
     color: var(--text-color-secondary);
 }
 
-#interpolate-size>div>div {
+#interpolate-size1>div>div {
     background-color: var(--clr-green-3);
     padding: .5em 1em;
     color: var(--text-color-secondary);
@@ -937,9 +937,9 @@ gradient-text-button>button:focus {
 }
 
 #user-valid-form>form>input {
-    background-color: var(--clr-white-3);
+    background-color: var(--clr-white-2);
     border: none;
-    outline: 2px solid #888;
+    outline: 2px solid #999;
     margin-block: .5rem 2rem;
     border-radius: .5rem;
     height: 30px;
@@ -952,4 +952,46 @@ gradient-text-button>button:focus {
     &:user-invalid {
         outline-color: #b51a1a;
     }
+}
+
+/* INTERPOLATE SIZE 2 */
+
+#interpolate-size2>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+}
+
+#interpolate-size2>div>div {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    background-color: #f0f0f0;
+    border-radius: .6rem;
+    margin-block: .5rem;
+    cursor: pointer;
+
+    width: 2.5rem;
+    overflow-x: clip;
+    white-space: nowrap;
+    transition: width .35s ease, padding .35s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: #e0e0e0;
+        width: max-content;
+        padding: .5rem 1rem;
+    }
+}
+
+#interpolate-size2>div>div>p {
+    margin-left: 1rem;
+    color: #333;
+    display: block;
+}
+
+#interpolate-size2 svg {
+    fill: #777;
+    min-width: 24px;
 }
