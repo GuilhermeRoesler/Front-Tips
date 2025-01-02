@@ -1,3 +1,20 @@
+// GLOBAL IMAGES
+
+const blurLoads = document.querySelectorAll(".blur-load")
+blurLoads.forEach(div => {
+    const img = div.querySelector("img")
+
+    function loaded() {
+        div.classList.add("loaded")
+    }
+
+    if (img.complete) {
+        loaded()
+    } else {
+        img.addEventListener("load", loaded)
+    }
+})
+
 // AUTO HIDE
 
 const container = document.querySelector('#auto-hide>div')

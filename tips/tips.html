@@ -9,6 +9,7 @@
     <script src="tips.js" defer></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <!-- ffmpeg -i imageName.jpg -vf scale=20:-1 imageName-small.jpg -->
 </head>
 
 <body>
@@ -140,24 +141,33 @@
     <h1>Clip Path</h1>
 
     <section id="clip-path">
-        <img loading="lazy" src="img/lake.jpg" alt="lake image">
+        <div class="blur-load"
+            style="background-image: url(img/lake-small.jpg), clip-path: polygon(50% 0%, 0% 100%, 100% 100%)">
+            <img loading="lazy" src="img/lake.jpg" alt="lake image">
+        </div>
     </section>
 
     <h1>Data Attribute</h1>
 
     <section id="data-attribute">
         <div data-label="free" data-level="basic">
-            <img loading="lazy" src="img/course1.jpg" alt="course 1">
+            <div class="blur-load" style="background-image: url(img/course1-small.jpg)">
+                <img loading="lazy" src="img/course1.jpg" alt="course 1">
+            </div>
             <h2>HTML Course</h2>
             <p>Learn the basics of web development with HTML5 as beginner-friendly as possible</p>
         </div>
         <div data-label="best selling" data-level="intermediate">
-            <img loading="lazy" src="img/course2.jpg" alt="course 2">
+            <div class="blur-load" style="background-image: url(img/course2-small.jpg)">
+                <img loading="lazy" src="img/course2.jpg" alt="course 2">
+            </div>
             <h2>CSS Course</h2>
             <p>Learn CSS3 in 7 Days completely from scratch</p>
         </div>
         <div data-label="coming soon" data-level="advanced">
-            <img loading="lazy" src="img/course3.jpg" alt="course 3">
+            <div class="blur-load" style="background-image: url(img/course3-small.jpg)">
+                <img loading="lazy" src="img/course3.jpg" alt="course 3">
+            </div>
             <h2>Web Development Course</h2>
             <p>Learn Web Development Basics and Advanced Concepts by completing pratical projects</p>
         </div>
@@ -190,12 +200,16 @@
         <!-- <p>The <code>filter</code> property lets us do some interesting effects, including manipulating images and other interesting things</p> -->
         <div class="card">
             <a href="#">Article title</a>
-            <img loading="lazy" src="img/science_rock.jpeg" alt="science rock">
+            <div class="blur-load" style="background-image: url(img/science_rock-small.jpeg)">
+                <img loading="lazy" src="img/science_rock.jpeg" alt="science rock">
+            </div>
             <p>Article description ipsum dolor sit amet</p>
         </div>
         <div class="card">
             <a href="#">Article title</a>
-            <img loading="lazy" src="img/science_planet.jpeg" alt="science planet">
+            <div class="blur-load" style="background-image: url(img/science_planet-small.jpeg)">
+                <img loading="lazy" src="img/science_planet.jpeg" alt="science planet">
+            </div>
             <p>Article description ipsum dolor sit amet</p>
         </div>
     </section>
@@ -211,16 +225,46 @@
     <h1>Element Left (Has)</h1>
 
     <section id="element-left-has">
-        <div class="item"><img loading="lazy" src="img/ordem1.jpeg" alt="ordem1"></div>
-        <div class="item"><img loading="lazy" src="img/ordem2.jpeg" alt="ordem2"></div>
-        <div class="item"><img loading="lazy" src="img/ordem3.jpeg" alt="ordem3"></div>
-        <div class="item"><img loading="lazy" src="img/ordem4.jpeg" alt="ordem4"></div>
-        <div class="item"><img loading="lazy" src="img/ordem5.jpeg" alt="ordem5"></div>
-        <div class="item"><img loading="lazy" src="img/ordem6.jpeg" alt="ordem6"></div>
-        <div class="item"><img loading="lazy" src="img/ordem7.jpeg" alt="ordem7"></div>
-        <div class="item"><img loading="lazy" src="img/ordem8.jpeg" alt="ordem8"></div>
-        <div class="item"><img loading="lazy" src="img/ordem9.jpeg" alt="ordem9"></div>
-        <div class="item"><img loading="lazy" src="img/ordem10.jpeg" alt="ordem10"></div>
+        <div class="blur-load item" style="background-image: url(img/ordem1-small.jpeg)">
+            <img loading="lazy" src="img/ordem1.jpeg" alt="ordem1">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem2-small.jpeg)">
+            <img loading="lazy" src="img/ordem2.jpeg" alt="ordem2">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem3-small.jpeg)">
+            <img loading="lazy" src="img/ordem3.jpeg" alt="ordem3">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem4-small.jpeg)">
+            <img loading="lazy" src="img/ordem4.jpeg" alt="ordem4">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem5-small.jpeg)">
+            <img loading="lazy" src="img/ordem5.jpeg" alt="ordem5">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem6-small.jpeg)">
+            <img loading="lazy" src="img/ordem6.jpeg" alt="ordem6">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem7-small.jpeg)">
+            <img loading="lazy" src="img/ordem7.jpeg" alt="ordem7">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem8-small.jpeg)">
+            <img loading="lazy" src="img/ordem8.jpeg" alt="ordem8">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem9-small.jpeg)">
+            <img loading="lazy" src="img/ordem9.jpeg" alt="ordem9">
+        </div>
+        </div>
+        <div class="blur-load item" style="background-image: url(img/ordem10-small.jpeg)">
+            <img loading="lazy" src="img/ordem10.jpeg" alt="ordem10">
+        </div>
+        </div>
     </section>
 
     <h1>Mix Blend Mode</h1>
@@ -237,7 +281,8 @@
     <section id="editable-element">
         <div>
             <p contenteditable="true" spellcheck="false">The "contenteditable" attribute in HTML is a feature that
-                allows users to edit the content directly within the browser. It enables users to interactively modify
+                allows users to edit the content directly within the browser. It enables users to interactively
+                modify
                 the content within that element. This attribute essentially turns the element into an editable area,
                 similar to a text editor or word processor.</p>
         </div>
@@ -292,28 +337,36 @@
         <div>
             <h2>Hello, World!</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem incidunt laudantium nostrum
-                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur officiis,
+                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur
+                officiis,
                 sunt cupiditate voluptas neque adipisci id est sequi!</p>
-            <img src="https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg" loading="lazy"
-                alt="sunflower">
+            <div class="blur-load" style="background-image: url(img/sunflower-small.jpg)" loading="lazy">
+                <img src="img/sunflower.jpg" loading="lazy" alt="sunflower">
+            </div>
         </div>
         <div>
             <h2>Hello, World!</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem incidunt laudantium nostrum
-                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur officiis,
-                sunt cupiditate voluptas neque adipisci id est sequi! Praesentium quisquam suscipit magni libero? Dolor
+                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur
+                officiis,
+                sunt cupiditate voluptas neque adipisci id est sequi! Praesentium quisquam suscipit magni libero?
+                Dolor
                 blanditiis vitae placeat aperiam necessitatibus dolorem alias modi error?</p>
-            <img src="https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg" loading="lazy"
-                alt="sunflower">
+            <div class="blur-load" style="background-image: url(img/sunflower-small.jpg)" loading="lazy">
+                <img src="img/sunflower.jpg" loading="lazy" alt="sunflower">
+            </div>
         </div>
         <div>
             <h2>Hello, World!</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem incidunt laudantium nostrum
-                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur officiis,
-                sunt cupiditate voluptas neque adipisci id est sequi! Praesentium quisquam suscipit magni libero? Dolor
+                dolores ipsa amet pariatur modi sed dicta totam consectetur voluptatum eum nemo, aspernatur
+                officiis,
+                sunt cupiditate voluptas neque adipisci id est sequi! Praesentium quisquam suscipit magni libero?
+                Dolor
                 blanditiis?</p>
-            <img src="https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg" loading="lazy"
-                alt="sunflower">
+            <div class="blur-load" style="background-image: url(img/sunflower-small.jpg)" loading="lazy">
+                <img src="img/sunflower.jpg" loading="lazy" alt="sunflower">
+            </div>
         </div>
     </section>
 
@@ -367,7 +420,8 @@
     <section id="grid-wrapping">
         <div class="card">
             <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem inventore fugiat sunt delectus
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem inventore fugiat sunt
+                delectus
                 itaque at recusandae animi, ea quis optio, dolores tenetur incidunt architecto cumque.</p>
         </div>
     </section>
@@ -375,31 +429,81 @@
     <h1>Image Gallery 1</h1>
 
     <section id="image-gallery1">
-        <div><img loading="lazy" src="img/people1.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people2.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people3.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people4.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people5.jpg" alt="random person"></div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people1-small.jpg)">
+                <img loading="lazy" src="img/people1.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people2-small.jpg)">
+                <img loading="lazy" src="img/people2.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people3-small.jpg)">
+                <img loading="lazy" src="img/people3.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people4-small.jpg)">
+                <img loading="lazy" src="img/people4.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people5-small.jpg)">
+                <img loading="lazy" src="img/people5.jpg" alt="random person">
+            </div>
+        </div>
     </section>
 
     <h1>Cool Animations 1</h1>
 
     <section id="cool-animations1">
         <div>
-            <img loading="lazy" src="img/people3.jpg" alt="random person">
+            <div class="blur-load" style="background-image: url(img/people3-small.jpg)">
+                <img loading="lazy" src="img/people3.jpg" alt="random person">
+            </div>
         </div>
     </section>
 
     <h1>Image Gallery 2</h1>
 
     <section id="image-gallery2">
-        <div><img loading="lazy" src="img/people6.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people7.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people8.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people6.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people7.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people8.jpg" alt="random person"></div>
-        <div><img loading="lazy" src="img/people6.jpg" alt="random person"></div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people6-small.jpg)">
+                <img loading="lazy" src="img/people6.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people7-small.jpg)">
+                <img loading="lazy" src="img/people7.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people8-small.jpg)">
+                <img loading="lazy" src="img/people8.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people6-small.jpg)">
+                <img loading="lazy" src="img/people6.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people7-small.jpg)">
+                <img loading="lazy" src="img/people7.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people8-small.jpg)">
+                <img loading="lazy" src="img/people8.jpg" alt="random person">
+            </div>
+        </div>
+        <div>
+            <div class="blur-load" style="background-image: url(img/people6-small.jpg)">
+                <img loading="lazy" src="img/people6w.jpg" alt="random person">
+            </div>
+        </div>
     </section>
 </body>
 
