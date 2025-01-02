@@ -11,6 +11,7 @@
     --clr-black-transparent-4: rgba(0, 0, 0, 0.2);
     --clr-blue-1: #0066ff;
     --clr-blue-2: #569aff;
+    --clr-blue-3: #00dbde;
     --clr-pink-1: #ff32d6;
     --clr-purple-1: #9c73f8;
     --clr-red-1: #e53935;
@@ -436,10 +437,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-
     to {
         --angle: 360deg;
     }
@@ -1062,7 +1059,7 @@ gradient-text-button>button:focus {
 
 h1:has(+ section#grid-wrapping) {
     position: relative;
-    
+
     &::after {
         content: 'Preview';
         position: absolute;
@@ -1124,7 +1121,7 @@ h1:has(+ section#grid-wrapping) {
     &:hover {
         flex: 2;
     }
-    
+
     &:nth-child(2)>img {
         scale: 1.15;
     }
@@ -1141,3 +1138,47 @@ h1:has(+ section#grid-wrapping) {
     object-fit: cover;
     transition: .5s ease;
 }
+
+/* COOL ANIMATIONS 1 */
+
+#cool-animations1>div {
+    position: relative;
+    width: 160px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: 30px solid rgba(0,0,0,.35);
+    outline-offset: -12px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: -40px;
+        border-radius: inherit;
+        background-image: conic-gradient(from var(--angle), var(--clr-blue-3), var(--clr-pink-1), var(--clr-blue-3));
+        animation: spin 3s linear infinite;
+        transition: inset .5s ease;
+    }
+
+    &::after {
+        filter: blur(2rem);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        animation-play-state: paused;
+        inset: -45px;
+    }
+}
+
+#cool-animations1>div>img {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: inherit;
+}
+
