@@ -28,7 +28,7 @@ function createNthChildPseudoElementDivs() {
     for (let i = 0; i < 15; i++) {
         const child = document.createElement("div")
         child.append(i + 1)
-        child.classList.add("nth-child-pseudo-class-item")
+        child.classList.add("item")
 
         document.querySelector("#nth-child-pseudo-class>div").appendChild(child)
     }
@@ -78,19 +78,29 @@ function openInterpolateSize() {
 
 const gridWrapping = document.getElementById("grid-wrapping")
 
-for (let i = 0; i < 11; i++) {
-    let card = document.createElement("div")
-    card.classList.add("card")
+// for (let i = 0; i < 11; i++) {
+//     let card = document.createElement("div")
+//     card.classList.add("card")
 
-    let child = document.querySelector("#grid-wrapping>div:first-child")
-    card.innerHTML = child.innerHTML
+//     let child = document.querySelector("#grid-wrapping>div:first-child")
+//     card.innerHTML = child.innerHTML
 
-    gridWrapping.appendChild(card)
+//     gridWrapping.appendChild(card)
+// }
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+    for (let i = 0; i < 6; i++) {
+        document.querySelector("#grid-wrapping").removeChild(document.querySelector("#grid-wrapping .card:last-child"))
+    }
 }
 
 const h1_grid_wrapping = document.querySelector("h1:has(+ section#grid-wrapping)")
 h1_grid_wrapping.addEventListener("click", () => {
-    gridWrapping.style.width = '250px'
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        gridWrapping.style.width = '150px'
+    } else {
+        gridWrapping.style.width = '250px'
+    }
 
     setInterval(() => {
         gridWrapping.style.width = '75%'
