@@ -1329,3 +1329,46 @@ h1:has(+ section#image-gallery2) {
 .reflect {
     -webkit-box-reflect: below 4px linear-gradient(transparent, rgba(0, 0, 0, .15)) !important;
 }
+
+/* HOVER 1, HOVER 2 */
+
+#hover1,
+#hover2 {
+    gap: 1rem;
+}
+
+#hover1>div,
+#hover2>div {
+    position: relative;
+    width: 8rem;
+    aspect-ratio: 1;
+    background-color: var(--clr-purple-1);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: opacity .5s, transform .5s, margin .5s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transition: inherit;
+    }
+}
+
+#hover1:hover>:not(:hover) {
+    opacity: .5;
+}
+
+#hover2>div:hover {
+    transform: scale(1.5);
+    margin-inline: 2rem;
+
+    &::after {
+        opacity: .4;
+    }
+}
