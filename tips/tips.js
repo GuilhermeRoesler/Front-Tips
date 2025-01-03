@@ -81,19 +81,44 @@ const gridWrapping = document.getElementById("grid-wrapping")
 for (let i = 0; i < 11; i++) {
     let card = document.createElement("div")
     card.classList.add("card")
-    
+
     let child = document.querySelector("#grid-wrapping>div:first-child")
     card.innerHTML = child.innerHTML
-    
+
     gridWrapping.appendChild(card)
 }
 
-const sla = document.querySelector("h1:has(+ section#grid-wrapping)")
-console.log(sla)
-sla.addEventListener("click", () => {
+const h1_grid_wrapping = document.querySelector("h1:has(+ section#grid-wrapping)")
+h1_grid_wrapping.addEventListener("click", () => {
     gridWrapping.style.width = '250px'
 
     setInterval(() => {
         gridWrapping.style.width = '75%'
-    }, 4000);
+    }, 3800);
+})
+
+// IMAGE GALLERY 2
+
+const h1_image_gallery2 = document.querySelector("h1:has(+ section#image-gallery2)")
+h1_image_gallery2.addEventListener("click", () => {
+    let estilo = getComputedStyle(h1_image_gallery2)
+    textValue = estilo.getPropertyValue('--text').trim()
+    console.log(textValue)
+
+    if (textValue == "'Remove Reflect'") {
+        console.log("re")
+        h1_image_gallery2.style.setProperty('--text', "'Add Reflect'")
+    } else if (textValue == "'Add Reflect'") {
+        console.log("add")
+        h1_image_gallery2.style.setProperty('--text', "'Remove Reflect'")
+    } else {
+        console.log("error")
+    }
+
+    const dives = document.querySelectorAll("#image-gallery2>div")
+
+    dives.forEach(div => {
+        div.classList.toggle("reflect")
+        // div.style.setProperty("-webkit-box-reflect", "below 4px linear-gradient(transparent, rgba(0, 0, 0, .15))")
+    })
 })
