@@ -134,3 +134,25 @@ h1_image_gallery2.addEventListener("click", () => {
         // div.style.setProperty("-webkit-box-reflect", "below 4px linear-gradient(transparent, rgba(0, 0, 0, .15))")
     })
 })
+
+// RADIO BUTTON 2
+
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll("#radio-button2 input[type='checkbox']");
+    const limit = 2; // Limite de checkboxes que podem ser selecionados
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+            // Conta quantos checkboxes estão marcados
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+
+            // Se o limite for atingido e uma nova opção for marcada
+            if (checkedCount > limit) {
+                // Desmarca as opções que já estavam marcadas
+                const checkedBoxes = Array.from(checkboxes).filter(cb => cb.checked);
+                checkedBoxes.forEach(cb => cb.checked = false)
+                checkbox.checked = true;
+            }
+        });
+    });
+});
