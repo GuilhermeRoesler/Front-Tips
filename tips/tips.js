@@ -4,6 +4,8 @@ const blurLoads = document.querySelectorAll(".blur-load")
 blurLoads.forEach(div => {
     const img = div.querySelector("img")
 
+    img.addEventListener("error", () => console.warn("Image failed to load"))
+
     function loaded() {
         div.classList.add("loaded")
     }
@@ -36,12 +38,13 @@ function createNthChildPseudoElementDivs() {
 
 createNthChildPseudoElementDivs()
 
-let i = 1;
+const TOTAL_CLASSES = 6
+let currentClass = 1
 function changeNthChildPseudoElementDivs() {
     let element = document.getElementById("nth-child-pseudo-class")
     element.classList.remove('active1', 'active2', 'active3', 'active4', 'active5', 'active6')
-    element.classList.add('active' + i)
-    i >= 6 ? i = 1 : i++
+    element.classList.add('active' + currentClass)
+    currentClass >= TOTAL_CLASSES ? currentClass = 1 : currentClass++
 }
 
 setInterval(changeNthChildPseudoElementDivs, 1000)
@@ -58,14 +61,13 @@ closeModalsButton.addEventListener("click", () => modals.close())
 
 modals.addEventListener("click", (event) => {
     const rect = modals.getBoundingClientRect();
-    if (
+    const clickedOutside =
         event.clientX < rect.left ||
         event.clientX > rect.right ||
         event.clientY < rect.top ||
         event.clientY > rect.bottom
-    ) {
-        modals.close();
-    }
+
+    if (clickedOutside) modals.close()
 });
 
 // INTERPOLATE SIZE
