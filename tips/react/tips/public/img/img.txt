@@ -1,0 +1,74 @@
+[
+    {
+        "name": "sunflower.webp",
+        "size": 400
+    },
+    {
+        "name": "people1.webp",
+        "size": 400
+    },
+    {
+        "name": "people2.webp",
+        "size": 400
+    },
+    {
+        "name": "people3.webp",
+        "size": 400
+    },
+    {
+        "name": "people5.webp",
+        "size": 400
+    },
+    {
+        "name": "people6.webp",
+        "size": 400
+    },
+    {
+        "name": "people7.webp",
+        "size": 400
+    },
+    {
+        "name": "people8.webp",
+        "size": 400
+    },
+    {
+        "name": "ordem1.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem2.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem3.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem4.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem5.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem6.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem7.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem8.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem9.webp",
+        "size": 200
+    },
+    {
+        "name": "ordem10.webp",
+        "size": 200
+    }
+]
