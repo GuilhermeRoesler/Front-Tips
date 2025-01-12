@@ -115,13 +115,10 @@ const h1_image_gallery2 = document.querySelector("h1:has(+ section#image-gallery
 h1_image_gallery2.addEventListener("click", () => {
     let estilo = getComputedStyle(h1_image_gallery2)
     textValue = estilo.getPropertyValue('--text').trim()
-    console.log(textValue)
 
     if (textValue == "'Remove Reflect'") {
-        console.log("re")
         h1_image_gallery2.style.setProperty('--text', "'Add Reflect'")
     } else if (textValue == "'Add Reflect'") {
-        console.log("add")
         h1_image_gallery2.style.setProperty('--text', "'Remove Reflect'")
     } else {
         console.log("error")

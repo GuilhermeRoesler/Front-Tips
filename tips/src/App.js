@@ -20,6 +20,21 @@ import GlowingAnimatedBorder from './components/GlowingAnimatedBorder'
 import ElementLeftHas from './components/ElementLeftHas';
 import MixBlendMode from './components/MixBlendMode';
 import EditableElement from './components/EditableElement';
+import NthChildPseudoClass from './components/NthChildPseudoClass';
+import Loader from './components/Loader';
+import Modals from './components/Modals';
+import InterpolateSize1 from './components/InterpolateSize1';
+import Subgrid from './components/Subgrid';
+import UserValidForm from './components/UserValidForm';
+import InterpolateSize2 from './components/InterpolateSize2';
+import GridWrapping from './components/GridWrapping';
+import ImageGallery1 from './components/ImageGallery1';
+import CoolAnimations1 from './components/CoolAnimations1';
+import ImageGallery2 from './components/ImageGallery2';
+import Hover1 from './components/Hover1';
+import Hover2 from './components/Hover2';
+import RadioButton1 from './components/RadioButton1';
+import RadioButton2 from './components/RadioButton2';
 
 function App() {
   useBlurLoad()
@@ -45,6 +60,21 @@ function App() {
       <ElementLeftHas />
       <MixBlendMode />
       <EditableElement />
+      <NthChildPseudoClass />
+      <Loader />
+      <Modals />
+      <InterpolateSize1 />
+      <Subgrid />
+      <UserValidForm />
+      <InterpolateSize2 />
+      <GridWrapping />
+      <ImageGallery1 />
+      <CoolAnimations1 />
+      <ImageGallery2 />
+      <Hover1 />
+      <Hover2 />
+      <RadioButton1 />
+      <RadioButton2 />
     </>
   );
 }
