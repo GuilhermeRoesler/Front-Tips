@@ -14,7 +14,7 @@ const Modals = () => {
             e.clientY < rect.top ||
             e.clientY > rect.bottom
         
-            if (clickedOutside) dialogRef.current.close()
+        if (clickedOutside) dialogRef.current.close()
     }
 
     return (

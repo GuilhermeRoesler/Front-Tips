@@ -158,7 +158,7 @@ article {
 
         --clr-white-1: #222;
         --clr-white-2: #222;
-        --clr-white-3: #383838;
+        --clr-white-3: #444;
         --clr-white-4: #8a8a8a;
         --clr-gray-1: #ccc;
         --clr-green-6: #002a25;
@@ -168,6 +168,7 @@ article {
         --clr-black-2: #eee;
         --clr-green-8: #054b27;
 
+        /* --border-light: 1px solid var(--clr-white-3); */
         --background-light: #212121;
     }
 
@@ -1274,7 +1275,7 @@ gradient-text-button>button:focus {
 
 #user-valid-form>form>input:user-valid {
     border-color: #01a925;
-    background-color: rgba(1, 169, 37, 0.02);
+    /* background-color: rgba(1, 169, 37, 0.02); */
 }
 
 #user-valid-form>form>input:user-invalid {
@@ -1790,4 +1791,158 @@ h1:has(+ section#image-gallery2) {
         left: 5px;
         transition: transform 0.25s ease;
     }
+}
+
+/* TODO List */
+
+#todo-list .card {
+    background-color: var(--background-light);
+    border: var(--border-light);
+    box-shadow: var(--shadow-3);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border-radius: .7rem;
+}
+
+#todo-list>.card>ul {
+    list-style-type: none;
+    border-radius: inherit;
+}
+
+#todo-list>.card>ul>li {
+    padding: 1rem;
+    color: var(--clr-black-2);
+    border: var(--border-light);
+    border-radius: inherit;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo-list>.card>ul>.checked {
+    border-color: var(--clr-blue-1);
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+
+    &>p {
+        text-decoration: line-through;
+    }
+}
+
+#todo-list>.card>ul>li>p {
+    max-width: 20ch;
+    word-wrap: break-word;
+}
+
+#todo-list>.card>ul>li>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#todo-list>.card>ul>li>div>input {
+    cursor: pointer;
+    translate: 0 1px;
+}
+
+#todo-list>.card>ul>li>div>svg {
+    cursor: pointer;
+}
+
+#todo-list>.card>ul>li>div>ul {
+    position: absolute;
+    top: 100%;
+    display: none;
+    list-style-type: none;
+    background-color: white;
+    border: var(--border-light);
+    border-radius: .2rem;
+    z-index: 2;
+    user-select: none;
+    
+    & li {
+        padding: .5rem;
+        cursor: pointer;
+
+        &:last-child {
+            color: red;
+        }
+    }
+}
+
+#todo-list>.card>button {
+    border: var(--border-light);
+    outline: none;
+    border-radius: inherit;
+    padding: .5rem;
+    cursor: pointer;
+    background-color: var(--clr-white-3);
+    
+    &:hover svg {
+        rotate: 360deg;
+    }
+}
+
+#todo-list>.card>button svg {
+    transition: 1s;
+    fill: white;
+}
+
+#todo-list>.card>dialog {
+    position: fixed;
+    margin: auto;
+    padding: 2em;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-main);
+    opacity: 0;
+    transition: all .3s allow-discrete;
+    display: flex;
+
+    &[open] {
+        opacity: 1;
+
+        &::backdrop {
+            background-color: var(--clr-black-transparent-1);
+        }
+    }
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+        transition: all .3s allow-discrete;
+    }
+}
+
+@starting-style {
+    #todo-list .card dialog[open] {
+        opacity: 0;
+
+        &::backdrop {
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+#todo-list>.card>dialog>input {
+    background: none;
+    border: var(--border-light);
+    outline: none;
+    padding: .5rem;
+    border-radius: inherit;
+    min-width: 200px;
+    font-size: 1rem;
+}
+
+#todo-list>.card>dialog>button {
+    background-color: var(--clr-black);
+    color: #ddd;
+    padding: .5rem;
+    border-radius: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
 }

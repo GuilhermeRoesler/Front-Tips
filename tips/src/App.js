@@ -35,6 +35,7 @@ import Hover1 from './components/Hover1';
 import Hover2 from './components/Hover2';
 import RadioButton1 from './components/RadioButton1';
 import RadioButton2 from './components/RadioButton2';
+import TodoList from './components/TodoList';
 
 function App() {
   useBlurLoad()
@@ -75,6 +76,7 @@ function App() {
       <Hover2 />
       <RadioButton1 />
       <RadioButton2 />
+      <TodoList />
     </>
   );
 }

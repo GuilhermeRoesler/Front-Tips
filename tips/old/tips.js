@@ -114,11 +114,11 @@ h1_grid_wrapping.addEventListener("click", () => {
 const h1_image_gallery2 = document.querySelector("h1:has(+ section#image-gallery2)")
 h1_image_gallery2.addEventListener("click", () => {
     let estilo = getComputedStyle(h1_image_gallery2)
-    textValue = estilo.getPropertyValue('--text').trim()
+    let textValue = estilo.getPropertyValue('--text').trim()
 
-    if (textValue == "'Remove Reflect'") {
+    if (textValue === "'Remove Reflect'") {
         h1_image_gallery2.style.setProperty('--text', "'Add Reflect'")
-    } else if (textValue == "'Add Reflect'") {
+    } else if (textValue === "'Add Reflect'") {
         h1_image_gallery2.style.setProperty('--text', "'Remove Reflect'")
     } else {
         console.log("error")
