@@ -5,8 +5,25 @@ const TodoList = () => {
     const [texts, setTexts] = useState(['Tomar água', 'Escovar os dentes', 'Tomar banho'])
     const [items, setItems] = useState([])
     const [openMenuIndex, setOpenMenuIndex] = useState(null);
+    const [editingIndex, setEditingIndex] = useState(null);
+    const [editText, setEditText] = useState('');
     const dialogRef = useRef(null)
     const inputRef = useRef(null)
+
+    const handleEditClick = (index) => {
+        setEditingIndex(index);
+        setEditText(texts[index]);
+        setOpenMenuIndex(null);
+    };
+
+    const handleEditSubmit = (index) => {
+        if (editText.trim()) {
+            setTexts(prev => prev.map((text, i) =>
+                i === index ? editText : text
+            ));
+            setEditingIndex(null);
+        }
+    };
 
     const handleCheckboxClick = (index) => {
         // access to the previous state
@@ -31,7 +48,7 @@ const TodoList = () => {
                 setOpenMenuIndex(null);
             }
         };
-    
+
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [openMenuIndex]);
@@ -39,24 +56,33 @@ const TodoList = () => {
     useEffect(() => {
         const newItems = texts.map((item, index) => (
             <li className={checkedItems[index] ? 'checked' : ''} key={index}>
-                <p>{item}</p>
+                {editingIndex === index ? (
+                    <input
+                        type="text"
+                        value={editText}
+                        onChange={(e) => setEditText(e.target.value)}
+                        onBlur={() => handleEditSubmit(index)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleEditSubmit(index)}
+                        autoFocus
+                    />
+                ) : (
+                    <p>{item}</p>
+                )}
                 <div>
-                    {/* creates a wrapper */}
-                    {/* arrow function useful for creating closures */}
-                    <input checked={checkedItems[index] || false} onChange={() => handleCheckboxClick(index)} type='checkbox'></input>
+                    <input checked={checkedItems[index] || false} onChange={() => handleCheckboxClick(index)} type='checkbox' />
                     <svg onClick={() => handleOptionsClick(index)} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c9c9c9">
                         <path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z" />
                     </svg>
-                    <ul className="options-menu" style={{display: openMenuIndex === index ? 'block' : 'none'}}>
+                    <ul className="options-menu" style={{ display: openMenuIndex === index ? 'block' : 'none' }}>
                         <li onClick={() => handleCheckboxClick(index)}>{checkedItems[index] ? 'Uncompleted' : 'Completed'}</li>
-                        <li>Edit</li>
+                        <li onClick={() => handleEditClick(index)}>Edit</li>
                         <li onClick={() => handleRemoveItem(index)}>Remove</li>
                     </ul>
                 </div>
             </li>
-        ))
-        setItems(newItems)
-    }, [texts, checkedItems, openMenuIndex])
+        ));
+        setItems(newItems);
+    }, [texts, checkedItems, openMenuIndex, editingIndex, editText]);
 
     const handleAdding = () => {
         const text = inputRef.current.value;
