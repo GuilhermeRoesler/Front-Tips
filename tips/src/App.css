@@ -1842,14 +1842,11 @@ h1:has(+ section#image-gallery2) {
     position: relative;
 }
 
+#todo-list>.card>ul>li>div>svg,
 #todo-list>.card>ul>li>div>input {
     cursor: pointer;
-    translate: 0 1px;
 }
 
-#todo-list>.card>ul>li>div>svg {
-    cursor: pointer;
-}
 
 #todo-list>.card>ul>li>div>ul {
     position: absolute;
@@ -1870,6 +1867,19 @@ h1:has(+ section#image-gallery2) {
             color: red;
         }
     }
+}
+
+#todo-list>.card>ul>li>div>.options-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style-type: none;
+    background-color: white;
+    border: var(--border-light);
+    border-radius: .2rem;
+    z-index: 2;
+    user-select: none;
+    min-width: 120px;
 }
 
 #todo-list>.card>button {

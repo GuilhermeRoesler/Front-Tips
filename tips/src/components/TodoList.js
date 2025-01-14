@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect, Children } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 const TodoList = () => {
     const [checkedItems, setCheckedItems] = useState({})
     const [texts, setTexts] = useState(['Tomar água', 'Escovar os dentes', 'Tomar banho'])
     const [items, setItems] = useState([])
+    const [openMenuIndex, setOpenMenuIndex] = useState(null);
     const dialogRef = useRef(null)
     const inputRef = useRef(null)
-    const optionsRef = useRef([])
 
     const handleCheckboxClick = (index) => {
         // access to the previous state
@@ -17,16 +17,24 @@ const TodoList = () => {
     }
 
     const handleOptionsClick = (index) => {
-        const list = optionsRef.current[index]
-        const display = list.style.display
-        if (display === 'block') list.style.display = ''
-        if (display === '') list.style.display = 'block'
-    }
+        setOpenMenuIndex(openMenuIndex === index ? null : index);
+    };
 
     const handleRemoveItem = (index) => {
         setTexts(prev => prev.filter((_, i) => i !== index))
         handleOptionsClick(index)
     }
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (openMenuIndex !== null && !event.target.closest('.options-menu')) {
+                setOpenMenuIndex(null);
+            }
+        };
+    
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [openMenuIndex]);
 
     useEffect(() => {
         const newItems = texts.map((item, index) => (
@@ -39,7 +47,7 @@ const TodoList = () => {
                     <svg onClick={() => handleOptionsClick(index)} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c9c9c9">
                         <path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z" />
                     </svg>
-                    <ul ref={el => optionsRef.current[index] = el}>
+                    <ul className="options-menu" style={{display: openMenuIndex === index ? 'block' : 'none'}}>
                         <li onClick={() => handleCheckboxClick(index)}>{checkedItems[index] ? 'Uncompleted' : 'Completed'}</li>
                         <li>Edit</li>
                         <li onClick={() => handleRemoveItem(index)}>Remove</li>
@@ -48,7 +56,7 @@ const TodoList = () => {
             </li>
         ))
         setItems(newItems)
-    }, [texts, checkedItems])
+    }, [texts, checkedItems, openMenuIndex])
 
     const handleAdding = () => {
         const text = inputRef.current.value;
