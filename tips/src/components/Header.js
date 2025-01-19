@@ -1,17 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Header = () => {
     return (
         <header id='Header'>
-            <a href="/home" id='hTitle'>Tips</a>
-            <nav>
-                <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/">Page</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Products</a></li>
-                </ul>
-            </nav>
+            <a href="/home">Tips</a>
+            <Navbar />
             <button>Contact</button>
         </header>
     )

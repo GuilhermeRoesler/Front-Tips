@@ -407,6 +407,69 @@ h1 {
     }
 }
 
+/* DROPDOWN */
+
+.dropdown a {
+    position: relative;
+    display: block;
+    text-align: left;
+    padding: .8rem 2rem .8rem 1rem;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    font-family: Arial;
+    white-space: nowrap;
+    border-radius: 5px;
+    transition: .2s;
+    user-select: none;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.dropdown .dropdown-content a:hover,
+.dropdown .dropdown-content a:has(+div.dropdown-content:hover) {
+    background-color: var(--clr-green);
+    color: white;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.dropdown .submenu {
+    background-color: white;
+    border-radius: 5px;
+    top: 0;
+    position: relative;
+}
+
+.dropdown .dropdown-content .submenu .dropdown-content {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    min-width: 160px;
+    /* animation: dropdownDown 0.5s ease; */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropdown-content .submenu:hover .dropdown-content {
+    display: block;
+    animation: fadeInFromNone 0.5s ease;
+}
+
 /* HOME */
 
 #Home h1 {
