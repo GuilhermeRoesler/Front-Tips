@@ -10,12 +10,10 @@ const Form1 = () => {
                 <div className="input-box">
                     <input type="text" name="" id="user" className="input-field" required />
                     <label htmlFor="user" className="label">Username</label>
-                    {/* <i className="bx bx-user icon"></i> */}
                 </div>
                 <div className="input-box">
                     <input type="password" name="" id="pass" className="input-field" required />
                     <label htmlFor="pass" className="label">Password</label>
-                    {/* <i className="bx bx-lock-alt icon"></i> */}
                 </div>
                 <div className="remember-forgot">
                     <div className="remember-me">
