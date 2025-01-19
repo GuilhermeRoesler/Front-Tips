@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
     /* COLORS */
@@ -2646,6 +2648,172 @@ h1:has(+ section#image-gallery2) {
         snowfall 37s linear infinite,
         wind 47s ease-in-out infinite;
     background-size: 32% 100%;
+}
+
+/* PLANS */
+
+#Plans {
+    --_clr-white: hsl(220, 37%, 100%);
+    --_clr-surface: hsl(220, 37%, 97%);
+    --_clr-text: hsl(244, 44%, 14%);
+
+    --_clr-yellow-400: hsl(42, 99%, 69%);
+    --_clr-yellow-300: hsl(47, 100%, 90%);
+    --_clr-purple-400: hsl(280, 96%, 45%);
+    --_clr-purple-300: hsl(282, 89%, 90%);
+    --_clr-cyan-400: hsl(198, 99%, 49%);
+    --_clr-cyan-300: hsl(240, 100%, 90%);
+
+    /* font families */
+    --_ff-base: "IBM Plex Sans", sans-serif;
+    --_ff-accent: "Young Serif", serif;
+
+    /* font weights */
+    --_fw-regular: 500;
+    --_fw-bold: 600;
+    --_fw-black: 700;
+
+    /* font sizes */
+    --_fs-300: 1rem;
+    --_fs-400: 1.125rem;
+    --_fs-500: 1.375rem;
+    --_fs-600: 1.75rem;
+    --_fs-700: 2.25rem;
+
+    background: var(--_clr-surface);
+    color: var(--_clr-text);
+    font-family: var(--_ff-base);
+    font-size: var(--_fs-300);
+    padding-bottom: 100px;
+}
+
+#Plans .header {
+    text-align: center;
+}
+
+#Plans .header>* {
+    margin-inline: auto;
+}
+
+#Plans .header h1 {
+    font-family: var(--_ff-accent);
+    font-size: var(--_fs-700);
+    max-width: 25ch;
+    margin-block: 4rem 1.5rem;
+}
+
+#Plans .header p {
+    font-size: var(--_fs-400);
+}
+
+#Plans .button {
+    color: inherit;
+    font-size: var(--_fs-300);
+    font-weight: var(--_fw-bold);
+    background: var(--_clr-surface);
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+    box-shadow: 0 0.25rem 0 rgb(0 0 0 / 0.08);
+    transition: background .2s;
+}
+
+#Plans .button:hover,
+#Plans .button:focus {
+    color: var(--_clr-surface);
+    background: var(--_clr-text);
+}
+
+#Plans .wrapper {
+    width: min(100% - 2rem, 55rem);
+    margin-inline: auto;
+}
+
+#Plans .even-columns {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 720px) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+#Plans .pricing {
+    padding: 0;
+    margin-block: 3rem;
+    list-style: none;
+}
+
+#Plans .plan {
+    --__shadow: var(--_shadow, pink);
+    --__icon: var(--_icon, red);
+    --__button-hover: var(--_button-hover, var(--_clr-text));
+
+    position: relative;
+    display: grid;
+    justify-content: start;
+    gap: 1rem;
+    background: var(--_clr-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 0.122), -1rem -1rem 0 0 var(--__shadow);
+}
+
+#Plans .plan__icon {
+    width: 2.5rem;
+    fill: var(--__icon);
+}
+
+#Plans .plan__title {
+    font-size: var(--_fs-500);
+    font-weight: var(--_fw-bold);
+}
+
+#Plans .plan__price {
+    font-size: var(--_fs-600);
+    font-weight: var(--_fw-black);
+}
+
+#Plans .plan__price span {
+    font-size: var(--_fs-300);
+    font-weight: var(--_fw-regular);
+}
+
+#Plans .plan>.button:last-child {
+    margin-block-start: 2rem;
+}
+
+#Plans .plan .button:hover,
+#Plans .plan .button:focus {
+    background-color: var(--__button-hover);
+}
+
+#Plans .plan--pram {
+    --_button-hover: var(--_clr-yellow-400);
+    --_shadow: var(--_clr-yellow-300);
+    --_icon: var(--_clr-yellow-400);
+}
+
+#Plans .plan--bike {
+    --_shadow: var(--_clr-cyan-300);
+    --_icon: var(--_clr-cyan-400);
+    --_button-hover: var(--_clr-cyan-400);
+}
+
+#Plans .plan--rocket {
+    --_shadow: var(--_clr-purple-300);
+    --_icon: var(--_clr-purple-400);
+    --_button-hover: var(--_clr-purple-400);
+}
+
+#Plans .plan--light {
+    --_shadow: lightgreen;
+    --_icon: lime;
+    --_button-hover: lime;
 }
 
 /* KEYFRAMES */

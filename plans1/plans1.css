@@ -144,16 +144,6 @@ li {
     margin-block-start: 2rem;
 }
 
-/* .plan::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    translate: -1.25rem -1.25rem;
-    border-radius: inherit;
-    background: var(--_shadow);
-  } */
-
 .plan .button:hover,
 .plan .button:focus {
     background-color: var(--_button-hover);
@@ -182,28 +172,3 @@ li {
     --icon: lime;
     --button-hover: lime;
 }
-
-
-/* .plan--pram::before {
-    background-color: var(--clr-yellow-300);
-}
-
-.plan--bike::before {
-    background-color: var(--clr-purple-300);
-}
-
-.plan--rocket::before {
-    background-color: var(--clr-cyan-300);
-}
-
-.plan--pram .plan__icon {
-    fill: var(--clr-yellow-400);
-}
-
-.plan--bike .plan__icon {
-    fill: var(--clr-purple-400);
-}
-
-.plan--rocket .plan__icon {
-    fill: var(--clr-cyan-400);
-} */
