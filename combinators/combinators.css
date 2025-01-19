@@ -1,7 +1,0 @@
-#container {
-    border: 2px solid;
-}
-
-#container + p {
-    background-color: hsl(60, 100%, 70%);
-}

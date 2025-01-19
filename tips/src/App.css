@@ -335,8 +335,71 @@ h1 {
     counter-increment: h1-counter;
 }
 
-h1::before {
+/* h1::before {
     content: counter(h1-counter) '. ';
+} */
+
+/* HEADER */
+
+#Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0f0f;
+    height: 10vh;
+    padding: 2.5%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .55);
+}
+
+#Header>a {
+    align-items: center;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: .2em;
+}
+
+#Header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#Header li a {
+    display: inline-block;
+    margin-inline: 1rem;
+    padding: 0px 20px;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    background-color: #202020;
+    border-radius: 20px;
+    transition: 0.4s;
+
+    &:hover {
+        color: #501aa7;
+    }
+}
+
+#Header button {
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    background-color: #30145e;
+    border: 1px solid #1d0c38;
+    border-radius: 30px;
+    opacity: 60%;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.4s;
+
+    &:hover {
+        opacity: 100%;
+    }
 }
 
 /* GRADIENT BUTTON */
@@ -1858,7 +1921,7 @@ h1:has(+ section#image-gallery2) {
     border-radius: .2rem;
     z-index: 2;
     user-select: none;
-    
+
     & li {
         padding: .5rem;
         cursor: pointer;
@@ -1889,7 +1952,7 @@ h1:has(+ section#image-gallery2) {
     padding: .5rem;
     cursor: pointer;
     background-color: var(--clr-white-3);
-    
+
     &:hover svg {
         rotate: 360deg;
     }
@@ -1955,4 +2018,102 @@ h1:has(+ section#image-gallery2) {
     display: grid;
     place-content: center;
     cursor: pointer;
+}
+
+/* DARKMODE SWITCH */
+
+#DarkmodeSwitch {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --primary-color-hover: #4d5a81;
+    --accent-color: #0071ff;
+    --accent-color-hover: #3891ff;
+}
+
+#DarkmodeSwitch.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+    --accent-color-hover: #3891ff;
+}
+
+#DarkmodeSwitch .header {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+}
+
+#DarkmodeSwitch .header button {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+}
+
+#DarkmodeSwitch .header button svg {
+    fill: var(--primary-color);
+
+    &:last-child {
+        display: none;
+    }
+}
+
+#DarkmodeSwitch.darkmode .header button svg {
+    &:first-child {
+        display: none;
+    }
+
+    &:last-child {
+        display: block;
+        fill: var(--text-color);
+    }
+}
+
+#DarkmodeSwitch button {
+    padding: 1em 2em;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: 150ms ease;
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+}
+
+#DarkmodeSwitch .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-inline: auto;
+    margin-top: 5vh;
+
+    & * {
+        margin-top: 1em;
+    }
+}
+
+#DarkmodeSwitch .container .cta-button {
+    background-color: var(--accent-color);
+
+    &:hover {
+        background-color: var(--accent-color-hover);
+    }
 }
