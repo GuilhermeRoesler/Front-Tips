@@ -2448,6 +2448,70 @@ h1:has(+ section#image-gallery2) {
     background-size: 32% 100%;
 }
 
+/* KEYFRAMES */
+
+/* VEM DA ESQUERDA E SURGE */
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+        z-index: 1;
+        transform: translateX(-10px);
+    }
+
+    1% {
+        display: block;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 3;
+        transform: translateX(0px);
+    }
+}
+
+/* ABAIXA OS DROPDOWNS */
+@keyframes dropdownDown {
+    0% {
+        display: none;
+    }
+
+    1% {
+        overflow-y: hidden;
+        display: block;
+        height: 0;
+    }
+
+    99% {
+        overflow-y: hidden;
+        height: auto;
+    }
+
+    100% {
+        overflow-y: visible;
+    }
+}
+
+@keyframes dragsLeft {
+    0% {
+        left: max(15vw, 300px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes dragsRight {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: max(15vw, 300px);
+    }
+}
+
 @keyframes snowfall {
     from {
         --y: -1%;
