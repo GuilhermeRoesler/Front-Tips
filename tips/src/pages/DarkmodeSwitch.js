@@ -21,7 +21,7 @@ const DarkmodeSwitch = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis iste alias unde esse expedita similique
                     dolorem, laborum repudiandae quas nulla assumenda recusandae commodi voluptate rerum ea! Quia ullam ad aut.
                 </p>
-                <button class="cta-button">Go Premium</button>
+                <button className="cta-button">Go Premium</button>
                 <button>More Info</button>
                 <section>
                     <h2>About us</h2>
