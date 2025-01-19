@@ -12,6 +12,10 @@ export const pages = [
         link: '/grid1'
     },
     {
+        name: 'Grid 2',
+        link: '/grid2'
+    },
+    {
         name: 'Darkmode Switch',
         link: 'darkmode-switch'
     },

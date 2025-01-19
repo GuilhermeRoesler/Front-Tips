@@ -2,7 +2,7 @@ for (let index = 0; index < 2; index++) {
     let node = document.getElementById('prioridade');
     let clone = node.cloneNode(true);
 
-    if (index != 0) {
+    if (index !== 0) {
         clone.classList.add('noright');
     }
 
