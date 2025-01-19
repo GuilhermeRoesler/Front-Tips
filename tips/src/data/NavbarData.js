@@ -4,6 +4,10 @@ export const pages = [
         link: '/form1'
     },
     {
+        name: 'Form 2',
+        link: '/form2'
+    },
+    {
         name: 'Darkmode Switch',
         link: 'darkmode-switch'
     },

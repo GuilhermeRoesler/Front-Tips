@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 :root {
     /* COLORS */
@@ -2377,6 +2378,106 @@ h1:has(+ section#image-gallery2) {
     font-weight: 500;
 }
 
+/* FORM 2 */
+
+#Form2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #151f28;
+}
+
+#Form2 .container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Form2 .container i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+
+    &:nth-child(1) {
+        --_clr: #00ff0a;
+        border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+        animation: rotate360 6s linear infinite;
+    }
+
+    &:nth-child(2) {
+        --_clr: #ff0057;
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: rotate360 4s linear infinite;
+    }
+
+    &:nth-child(3) {
+        --_clr: #fffd44;
+        border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+        animation: rotate-360 10s linear infinite;
+    }
+}
+
+#Form2 .container:hover i {
+    border: 6px solid var(--_clr);
+    filter: drop-shadow(0 0 20px var(--_clr));
+}
+
+#Form2 .login {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#Form2 .login h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+#Form2 .login input {
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    outline: none;
+}
+
+#Form2 .login input[type="submit"] {
+    width: 100%;
+    background: #0078ff;
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    cursor: pointer;
+}
+
+#Form2 .login input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#Form2 .login .links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#Form2 .login .links a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* SNOWFALL */
 
 #Snowfall {
@@ -2525,5 +2626,21 @@ h1:has(+ section#image-gallery2) {
 @keyframes wind {
     50% {
         translate: 200px;
+    }
+}
+
+@keyframes rotate360 {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotate-360 {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
     }
 }
