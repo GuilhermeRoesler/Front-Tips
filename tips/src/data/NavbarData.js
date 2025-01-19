@@ -6,5 +6,9 @@ export const pages = [
     {
         name: 'Darkmode Switch',
         link: 'darkmode-switch'
+    },
+    {
+        name: 'Snowfall',
+        link: '/snowfall'
     }
 ]
