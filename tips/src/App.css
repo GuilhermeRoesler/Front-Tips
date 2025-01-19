@@ -2102,6 +2102,86 @@ h1:has(+ section#image-gallery2) {
     cursor: pointer;
 }
 
+/* DROPDOWN 2 */
+
+/* .multi-level,
+.item ul,
+.nav input[type="checkbox"] {
+    display: none;
+}
+
+#menu:checked~.multi-level,
+.item input:checked~ul {
+    display: block;
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    float: left;
+    z-index: 0;
+    margin: 17px 1em 0 2em;
+}
+
+.item input+.arrow {
+    transform: rotate(-90deg);
+    transition: 0.1s;
+}
+
+.item input:checked+.arrow {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+label {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid #cfd8dc;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: white;
+    background-color: #f44336;
+}
+
+.nav ul,
+.nav li,
+label,
+.nav li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 2em;
+    list-style: none;
+    text-decoration: none;
+    color: #90a4ae;
+    font-weight: 100;
+    width: 100%;
+}
+
+.item ul {
+    padding: 0 0.25rem;
+}
+
+.nav li a {
+    padding: 0 4em;
+} */
+
 /* DARKMODE SWITCH */
 
 #DarkmodeSwitch {
@@ -2577,6 +2657,35 @@ h1:has(+ section#image-gallery2) {
     grid-column: 1;
     grid-row: 2;
     align-self: end;
+}
+
+@media (max-width: 600px) {
+    #Grid1 .grid1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Grid1 .grid1 div:nth-child(n + 4) {
+        display: block;
+    }
+
+    #Grid1 .grid1 div.anuncio {
+        grid-area: auto;
+        order: -1;
+    }
+
+    #Grid1 .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    #Grid1 .sidebar {
+        display: flex;
+        overflow: scroll;
+    }
+
+    #Grid1 .sidebar>div {
+        flex: 1 0 200px;
+        margin: 0 10px;
+    }
 }
 
 /* SNOWFALL */
