@@ -78,7 +78,7 @@ body {
 }
 
 main {
-    margin-top: 10vh;
+    padding-top: 10vh;
     min-height: 90vh;
 }
 
@@ -2478,15 +2478,114 @@ h1:has(+ section#image-gallery2) {
     text-decoration: none;
 }
 
+/* GRID 1 */
+
+#Grid1 {
+    margin-bottom: 100px;
+}
+
+#Grid1 h1 {
+    text-align: center;
+    margin-block: 100px;
+}
+
+#Grid1 .flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#Grid1 .flex>div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+#Grid1 .flex div p {
+    text-align: center;
+}
+
+#Grid1 .grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    gap: 20px;
+    /* text-align: center; */
+}
+
+#Grid1 .grid1 div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+#Grid1 .grid1>div.anuncio {
+    grid-area: 2 / 1 / 5 / 1;
+    display: block;
+}
+
+#Grid1 .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#Grid1 .sidebar>div {
+    margin-bottom: 10px;
+}
+
+#Grid1 .grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#Grid1 .grid3:first {
+    background-color: blue;
+}
+
+#Grid1 .grid3-item:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#Grid1 .grid3-item {
+    display: grid;
+}
+
+#Grid1 .grid3-item img {
+    grid-column: 1;
+    grid-row: 1/3;
+    align-self: end;
+}
+
+#Grid1 .grid3-item p {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}
+
 /* SNOWFALL */
 
 #Snowfall {
-    --clr-lightblue: #8dd4f7;
-    --clr-blue: #9080fa;
+    --_clr-lightblue: #8dd4f7;
+    --_clr-blue: #9080fa;
 
-    --background-1: linear-gradient(var(--clr-lightblue), var(--clr-blue) 85%) no-repeat,
+    --_background-1: linear-gradient(var(--_clr-lightblue), var(--_clr-blue) 85%) no-repeat,
         url(https://images.unsplash.com/photo-1677131757262-8b8b6f2a1135) fixed no-repeat center / cover;
-    --background-2: url(https://images.unsplash.com/photo-1677131757262-8b8b6f2a1135) fixed no-repeat center / cover;
+    --_background-2: url(https://images.unsplash.com/photo-1677131757262-8b8b6f2a1135) fixed no-repeat center / cover;
 
     font-size: 1rem;
     line-height: 1.7;
@@ -2495,7 +2594,7 @@ h1:has(+ section#image-gallery2) {
     display: grid;
     place-content: center;
     position: relative;
-    background: var(--background-1);
+    background: var(--_background-1);
     background-blend-mode: soft-light;
 }
 

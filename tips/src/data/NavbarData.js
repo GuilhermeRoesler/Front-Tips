@@ -8,11 +8,19 @@ export const pages = [
         link: '/form2'
     },
     {
+        name: 'Grid 1',
+        link: '/grid1'
+    },
+    {
         name: 'Darkmode Switch',
         link: 'darkmode-switch'
     },
     {
         name: 'Snowfall',
         link: '/snowfall'
+    },
+    {
+        name: 'Plans',
+        link: '/plans'
     }
 ]
