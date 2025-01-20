@@ -1,4 +1,4 @@
-# Learning Front End
+# Front End Tips
 
 > this is a test repository
 
