@@ -12,7 +12,7 @@ import Grid2 from './pages/Grid2';
 import DarkmodeSwitch from './pages/DarkmodeSwitch';
 import Snowfall from './pages/Snowfall';
 import Plans from './pages/Plans';
-import Home2 from './pages/Home2'
+import Tips from './pages/Tips'
 
 function App() {
   useBlurLoad()
@@ -30,7 +30,7 @@ function App() {
         <Route path='/darkmode-switch' element={<DarkmodeSwitch />} />
         <Route path='/snowfall' element={<Snowfall />} />
         <Route path='/plans' element={<Plans />} />
-        <Route path='/home2' element={<Home2 />} />
+        <Route path='/tips' element={<Tips />} />
       </Routes>
     </Layout>
   );

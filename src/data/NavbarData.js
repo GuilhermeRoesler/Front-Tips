@@ -1,7 +1,12 @@
 export const pages = [
     {
-        name: 'Form 1',
-        link: '/form1'
+        name: 'Form',
+        link: '/form1',
+        subOptions: [
+            {name: 'form sla'},
+            {name: 'form sla'},
+            {name: 'form sla'},
+        ]
     },
     {
         name: 'Form 2',
