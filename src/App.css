@@ -3427,6 +3427,80 @@ label,
     --_button-hover: lime;
 }
 
+/* WANNA DATE */
+
+#WannaDate {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#WannaDate div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    width: 20%;
+    margin-top: 100px;
+}
+
+#WannaDate div button {
+    padding: 1rem;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:first-child {
+        background-color: green;
+        /* position: absolute;
+        top: 0; */
+    }
+
+    &:last-child {
+        background-color: red;
+    }
+}
+
+#WannaDate dialog {
+    position: fixed;
+    margin: auto;
+    padding: 2em;
+    border: none;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    box-shadow: var(--shadow-main);
+    opacity: 0;
+    transition: all .3s allow-discrete;
+}
+
+#WannaDate>dialog[open] {
+    opacity: 1;
+}
+
+#WannaDate>dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s allow-discrete;
+}
+
+#WannaDate>dialog[open]::backdrop {
+    background-color: var(--clr-black-transparent-1);
+}
+
+@starting-style {
+    #WannaDate>dialog[open] {
+        opacity: 0;
+    }
+
+    #WannaDate>dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
 /* KEYFRAMES */
 
 /* VEM DA ESQUERDA E SURGE */
