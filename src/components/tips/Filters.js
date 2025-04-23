@@ -4,7 +4,7 @@ const Filters = () => {
     return (
         <>
             <h1>Filters</h1>
-            <section id="filters">
+            <section id="Filters">
                 {/* <p>The <code>filter</code> property lets us do some interesting effects, including manipulating images and other interesting things</p> */}
                 <div className="card">
                     <a href="/">Article title</a>

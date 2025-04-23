@@ -20,7 +20,7 @@ const Modals = () => {
     return (
         <>
             <h1>Modals</h1>
-            <section id="modals">
+            <section id="Modals">
                 <button onClick={handleOpen}>Open</button>
                 <dialog ref={dialogRef} onClick={hanleClickOutside} aria-labelledby="modal-title" aria-describedby="modal-content">
                     <h2>Hello, World!</h2>

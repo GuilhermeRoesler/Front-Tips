@@ -113,7 +113,7 @@ const TodoList = () => {
     return (
         <>
             <h1>TODO List</h1>
-            <section id='todo-list'>
+            <section id='TodoList'>
                 <div className='card'>
                     <ul>
                         {items}

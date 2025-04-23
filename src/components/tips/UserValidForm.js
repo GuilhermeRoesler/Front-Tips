@@ -4,7 +4,7 @@ const UserValidForm = () => {
     return (
         <>
             <h1>User Valid Form</h1>
-            <section id="user-valid-form">
+            <section id="UserValidForm">
                 <form action="">
                     <label htmlFor="">Name</label>
                     <input required type="text" placeholder="Name" />

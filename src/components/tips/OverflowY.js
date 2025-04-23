@@ -4,7 +4,7 @@ const OverflowY = () => {
     return (
         <>
             <h1>Overflow Y</h1>
-            <section id="overflow-y">
+            <section id="OverflowY">
                 <div>
                     <h3>This container has a fixed height</h3>
                     <p lang="la">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero doloremque exercitationem odit

@@ -5,7 +5,7 @@ const Subgrid = () => {
         <>
             <h1>Subgrid</h1>
 
-            <section id="subgrid">
+            <section id="Subgrid">
                 <div>
                     <h2>Hello, World!</h2>
                     <p lang="la">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem incidunt laudantium

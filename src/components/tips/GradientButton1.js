@@ -4,7 +4,7 @@ const GradientButton1 = () => {
     return (
         <>
             <h1>Gradient button 1</h1>
-            <section id="gradient-button1">
+            <section id="GradientButton1">
                 <button>My Button</button>
             </section>
         </>

@@ -13,7 +13,7 @@ const ElementLeftHas = () => {
     return (
         <>
             <h1>Element Left (Has)</h1>
-            <section id="element-left-has">
+            <section id="ElementLeftHas">
                 {cards}
             </section>
         </>

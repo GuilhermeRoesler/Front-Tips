@@ -181,20 +181,20 @@ article {
         background: #343434 !important;
     }
 
-    #filters .card {
+    #Filters .card {
         background-color: var(--primary-color);
     }
 
-    #modals>button {
+    #Modals>button {
         border-color: var(--clr-white-3) !important;
     }
 
-    #subgrid>div {
+    #Subgrid>div {
         background-color: var(--primary-color) !important;
         border: none !important;
     }
 
-    #user-valid-form>form {
+    #UserValidForm>form {
         background: #212121 !important;
         border: none !important;
 
@@ -203,30 +203,30 @@ article {
         }
     }
 
-    #grid-wrapping .card {
+    #GridWrapping .card {
         border-color: #4e4e4e !important;
     }
 
-    #radio-button1 .card>div {
+    #RadioButton1 .card>div {
         background-color: var(--clr-white-3) !important;
     }
 }
 
 @media screen and (max-width: 600px) {
 
-    #auto-hide>div {
+    #AutoHide>div {
         transition: 1s !important;
     }
 
-    #glowing-animated-border {
+    #GlowingAnimatedBorder {
         width: 100%;
     }
 
-    #editable-element>div {
+    #EditableElement>div {
         width: auto !important;
     }
 
-    #nth-child-pseudo-class>div {
+    #NthChildPseudoClass>div {
         grid-template-columns: repeat(3, 1fr) !important;
     }
 
@@ -244,20 +244,20 @@ article {
         font-size: .6rem !important;
     }
 
-    h1:has(+ section#image-gallery2)::after {
+    h1:has(+ section#ImageGallery2)::after {
         translate: -50% 150% !important;
     }
 
-    #hover1,
-    #hover2 {
+    #Hover1,
+    #Hover2 {
         gap: .5rem !important;
     }
 
-    #hover2>div:hover {
+    #Hover2>div:hover {
         margin-inline: 1rem !important;
     }
 
-    #radio-button1 .card>div {
+    #RadioButton1 .card>div {
         width: min-content !important;
         flex-direction: column;
     }
@@ -512,8 +512,8 @@ h1 {
 
 /* GRADIENT BUTTON */
 
-#gradient-button1>button,
-#gradient-button2>button {
+#GradientButton1>button,
+#GradientButton2>button {
     padding: 1.5rem 3.5rem;
     cursor: pointer;
     background-color: var(--clr-black-1);
@@ -528,11 +528,11 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-#gradient-button1>button:hover {
+#GradientButton1>button:hover {
     background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
 }
 
-#gradient-button1>button::before {
+#GradientButton1>button::before {
     position: absolute;
     content: '';
     top: 0;
@@ -543,11 +543,11 @@ h1 {
     z-index: -1;
 }
 
-#gradient-button1>button:hover::after {
+#GradientButton1>button:hover::after {
     padding: .3em;
 }
 
-#gradient-button1>button::after {
+#GradientButton1>button::after {
     content: '';
     background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
     position: absolute;
@@ -561,36 +561,36 @@ h1 {
     transition: .3s ease;
 }
 
-#gradient-button2>button {
+#GradientButton2>button {
     background-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1));
 }
 
-#gradient-button2 button {
+#GradientButton2 button {
     border: .1em solid transparent;
     border-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1)) 1;
 }
 
-#gradient-button2 button:hover {
+#GradientButton2 button:hover {
     border: .3em solid transparent;
     border-image: linear-gradient(to right, var(--clr-blue-1), var(--clr-pink-1)) 1;
 }
 
 /* ACCENT AND CARET COLOR */
 
-#accent-and-caret-color {
+#AccentAndCaretColor {
     flex-direction: column;
     align-items: center;
 }
 
-#accent-and-caret-color .checkbox-radio {
+#AccentAndCaretColor .checkbox-radio {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
     position: relative;
 }
 
-#accent-and-caret-color input[type="checkbox"],
-#accent-and-caret-color input[type="radio"] {
+#AccentAndCaretColor input[type="checkbox"],
+#AccentAndCaretColor input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -615,12 +615,12 @@ h1 {
     }
 }
 
-#accent-and-caret-color .slider {
+#AccentAndCaretColor .slider {
     width: 300px;
     margin-bottom: 20px;
 }
 
-#accent-and-caret-color input[type="range"] {
+#AccentAndCaretColor input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -630,7 +630,7 @@ h1 {
     outline: none;
 }
 
-#accent-and-caret-color input[type="range"]::-webkit-slider-thumb {
+#AccentAndCaretColor input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
@@ -639,7 +639,7 @@ h1 {
     cursor: pointer;
 }
 
-#accent-and-caret-color input[type="range"]::-moz-range-thumb {
+#AccentAndCaretColor input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
     background-color: var(--clr-red-1);
@@ -647,7 +647,7 @@ h1 {
     cursor: pointer;
 }
 
-#accent-and-caret-color .text-box {
+#AccentAndCaretColor .text-box {
     width: 300px;
     padding: 10px;
     border-radius: 5px;
@@ -662,8 +662,8 @@ h1 {
 
 /* INSET */
 
-#inset1>div,
-#inset2>div {
+#Inset1>div,
+#Inset2>div {
     border: 3px solid var(--clr-light-gray-2);
     height: 300px;
     width: 300px;
@@ -672,14 +672,14 @@ h1 {
     position: relative;
 }
 
-#inset1>div>div,
-#inset2>div>div {
+#Inset1>div>div,
+#Inset2>div>div {
     background-color: var(--clr-blue-1);
     position: absolute;
     inset: 10px 30px 0px 100px;
 }
 
-#inset2>div>div {
+#Inset2>div>div {
     height: 50px;
     width: 50px;
     inset: 0;
@@ -688,7 +688,7 @@ h1 {
 
 /* OVERFLOW Y */
 
-#overflow-y>div {
+#OverflowY>div {
     padding: 1em;
     border-radius: 1em;
     background-color: var(--primary-color);
@@ -701,27 +701,27 @@ h1 {
     }
 }
 
-#overflow-y>div>h3 {
+#OverflowY>div>h3 {
     color: #ddd;
     margin-bottom: .3em;
 }
 
 /* ICON SHADOW */
 
-#icon-shadow {
+#IconShadow {
     background-color: white;
     padding: 2rem;
     width: 50%;
 }
 
-#icon-shadow>svg {
+#IconShadow>svg {
     color: black;
     filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.5));
 }
 
 /* DETAILS AND SUMMARY */
 
-#details-and-summary>div>details {
+#DetailsAndSummary>div>details {
     background-color: var(--primary-color);
     padding: .5em 1em;
     border-radius: .25rem;
@@ -741,7 +741,7 @@ h1 {
     }
 }
 
-#details-and-summary>div>details>summary {
+#DetailsAndSummary>div>details>summary {
     color: hsl(0 0% 98%);
     line-height: 1.3;
     margin-inline-start: 1em;
@@ -750,12 +750,12 @@ h1 {
     cursor: pointer;
 }
 
-#details-and-summary>div>details>summary::marker {
+#DetailsAndSummary>div>details>summary::marker {
     font-size: .75em;
     color: hsl(0 0% 40%);
 }
 
-#details-and-summary>div>details>p {
+#DetailsAndSummary>div>details>p {
     padding-block: 1em;
     color: hsl(0 0% 78%);
     font-size: .8rem;
@@ -765,7 +765,7 @@ h1 {
 
 /* AUTO HIDE */
 
-#auto-hide>div {
+#AutoHide>div {
     margin: 0 auto;
     width: min(500px, 100%);
     padding: 1.5em;
@@ -783,12 +783,12 @@ h1 {
     }
 }
 
-#auto-hide p {
+#AutoHide p {
     color: #ddd;
     margin-top: 2.5em;
 }
 
-#auto-hide>div>div:last-child {
+#AutoHide>div>div:last-child {
     overflow: hidden;
 }
 
@@ -798,7 +798,7 @@ h1 {
 
 /* CLIP PATH */
 
-#clip-path>div {
+#ClipPath>div {
     max-width: 600px;
 
     &:hover>img {
@@ -806,7 +806,7 @@ h1 {
     }
 }
 
-#clip-path img {
+#ClipPath img {
     width: 100%;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transition: clip-path 1s;
@@ -814,12 +814,12 @@ h1 {
 
 /* DATA ATTRIBUTE */
 
-#data-attribute {
+#DataAttribute {
     flex: 1 1 100px;
     flex-wrap: wrap;
 }
 
-#data-attribute>div {
+#DataAttribute>div {
     height: auto;
     width: 400px;
     background-color: var(--primary-color);
@@ -831,7 +831,7 @@ h1 {
     margin-bottom: 2.2em;
 }
 
-#data-attribute>div>div {
+#DataAttribute>div>div {
     border-radius: 7px;
     width: auto;
     max-width: 100%;
@@ -839,14 +839,14 @@ h1 {
     overflow: hidden;
 }
 
-#data-attribute>div>h2,
-#data-attribute>div>p {
+#DataAttribute>div>h2,
+#DataAttribute>div>p {
     text-align: center;
     margin-block: 0.5em;
     color: white;
 }
 
-#data-attribute>div::before {
+#DataAttribute>div::before {
     content: attr(data-label);
     position: absolute;
     top: 0;
@@ -863,7 +863,7 @@ h1 {
 }
 
 @media (prefers-color-scheme: light) {
-    #data-attribute>div::before {
+    #DataAttribute>div::before {
         background-color: #000000ce;
         border: 1px solid white;
         color: white;
@@ -878,7 +878,7 @@ h1 {
     inherits: false;
 }
 
-#conic-gradient>div {
+#ConicGradient>div {
     width: 400px;
     aspect-ratio: 1;
 
@@ -901,7 +901,7 @@ h1 {
     inherits: false;
 }
 
-#gradient-text-button>button {
+#GradientTextButton>button {
     padding: 1.5rem 3.5rem;
     border: none;
     color: white;
@@ -917,7 +917,7 @@ h1 {
     animation: color-change 2s linear infinite;
 }
 
-#gradient-text-button>button::before {
+#GradientTextButton>button::before {
     position: absolute;
     content: '';
     top: 0;
@@ -928,7 +928,7 @@ h1 {
     z-index: -1;
 }
 
-#gradient-text-button>button:hover,
+#GradientTextButton>button:hover,
 gradient-text-button>button:focus {
     font-size: 1.7rem;
     box-shadow: var(--shadow-main), 150px 0 100px var(--clr-pink-1), -150px 0 100px var(--clr-blue-1);
@@ -946,7 +946,7 @@ gradient-text-button>button:focus {
 
 /* ISOLATION */
 
-#isolation {
+#Isolation {
     background-color: var(--primary-color);
 
     & p {
@@ -954,13 +954,13 @@ gradient-text-button>button:focus {
     }
 }
 
-#isolation>div {
+#Isolation>div {
     position: relative;
     isolation: isolate;
     padding: 2em;
 }
 
-#isolation>div::before {
+#Isolation>div::before {
     content: open-quote;
     font-family: serif;
     font-weight: 900;
@@ -971,17 +971,17 @@ gradient-text-button>button:focus {
     z-index: -1;
 }
 
-#isolation>div::after {
+#Isolation>div::after {
     content: no-close-quote;
 }
 
 /* FILTERS */
 
-#filters {
+#Filters {
     flex-wrap: wrap;
 }
 
-#filters .card {
+#Filters .card {
     background-color: var(--primary-color);
     width: 400px;
     margin: 0 15px;
@@ -992,13 +992,13 @@ gradient-text-button>button:focus {
     margin-bottom: 2em;
 }
 
-#filters .card a {
+#Filters .card a {
     color: var(--clr-blue-2);
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-#filters .card img {
+#Filters .card img {
     height: 80%;
     margin: 1em 0;
     filter: grayscale(100%) contrast(200%);
@@ -1006,13 +1006,13 @@ gradient-text-button>button:focus {
     cursor: pointer;
 }
 
-#filters .card p {
+#Filters .card p {
     color: white;
     text-align: center;
 }
 
-#filters .card:hover img,
-#filters .card:focus-within img {
+#Filters .card:hover img,
+#Filters .card:focus-within img {
     filter: grayscale(0%) contrast(100%);
 }
 
@@ -1024,7 +1024,7 @@ gradient-text-button>button:focus {
 
 /* GLOWING ANIMATED BORDER */
 
-#glowing-animated-border>div {
+#GlowingAnimatedBorder>div {
     background-color: var(--clr-green-2);
     padding: 5em;
     width: 100%;
@@ -1034,7 +1034,7 @@ gradient-text-button>button:focus {
     z-index: -1;
 }
 
-#glowing-animated-border>div>div {
+#GlowingAnimatedBorder>div>div {
     height: 60vh;
     aspect-ratio: 1 / 1.5;
     background-color: var(--clr-green-1);
@@ -1042,8 +1042,8 @@ gradient-text-button>button:focus {
     position: relative;
 }
 
-#glowing-animated-border>div>div::before,
-#glowing-animated-border>div>div::after {
+#GlowingAnimatedBorder>div>div::before,
+#GlowingAnimatedBorder>div>div::after {
     content: '';
     position: absolute;
     inset: -.5rem;
@@ -1053,19 +1053,19 @@ gradient-text-button>button:focus {
     animation: color-change 10s linear infinite;
 }
 
-#glowing-animated-border>div>div::after {
+#GlowingAnimatedBorder>div>div::after {
     filter: blur(3.5em);
 }
 
 /* ELEMENT LEFT HAS */
 
-#element-left-has {
+#ElementLeftHas {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     gap: .3rem;
 }
 
-#element-left-has .item {
+#ElementLeftHas .item {
     transition: .5s;
     filter: brightness(0);
     padding: .5em;
@@ -1073,51 +1073,51 @@ gradient-text-button>button:focus {
     will-change: transform, filter;
 }
 
-#element-left-has .item:hover {
+#ElementLeftHas .item:hover {
     filter: brightness(1);
     transform: translateZ(200px);
 }
 
-#element-left-has .item:hover+* {
+#ElementLeftHas .item:hover+* {
     filter: brightness(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-#element-left-has .item:hover+*+* {
+#ElementLeftHas .item:hover+*+* {
     filter: brightness(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-#element-left-has .item:hover+*+*+* {
+#ElementLeftHas .item:hover+*+*+* {
     filter: brightness(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
 
-#element-left-has .item:has(+ *:hover) {
+#ElementLeftHas .item:has(+ *:hover) {
     filter: brightness(0.6);
     transform: translateZ(150px) rotateY(-40deg);
 }
 
-#element-left-has .item:has(+ * + *:hover) {
+#ElementLeftHas .item:has(+ * + *:hover) {
     filter: brightness(0.4);
     transform: translateZ(70px) rotateY(-20deg);
 }
 
-#element-left-has .item:has(+ * + * + *:hover) {
+#ElementLeftHas .item:has(+ * + * + *:hover) {
     filter: brightness(0.2);
     transform: translateZ(30px) rotateY(-10deg);
 }
 
 /* MIX BLEND MODE */
 
-#mix-blend-mode>div {
+#MixBlendMode>div {
     position: relative;
     margin-inline: auto;
     width: 250px;
     height: 150px;
 }
 
-#mix-blend-mode>div>div {
+#MixBlendMode>div>div {
     position: absolute;
     top: 0;
     width: 150px;
@@ -1126,12 +1126,12 @@ gradient-text-button>button:focus {
     mix-blend-mode: difference;
 }
 
-#mix-blend-mode>div>div:first-child {
+#MixBlendMode>div>div:first-child {
     background-color: red;
     left: 0;
 }
 
-#mix-blend-mode>div>div:last-child {
+#MixBlendMode>div>div:last-child {
     background-color: green;
     translate: -17%;
     left: 50%;
@@ -1139,7 +1139,7 @@ gradient-text-button>button:focus {
 
 /* EDITABLE ELEMENT */
 
-#editable-element>div {
+#EditableElement>div {
     width: 40%;
 
     & p {
@@ -1149,14 +1149,14 @@ gradient-text-button>button:focus {
 
 /* NTH CHILD PSEUDO CLASS */
 
-#nth-child-pseudo-class>div {
+#NthChildPseudoClass>div {
     max-width: 95%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .5em;
 }
 
-#nth-child-pseudo-class .item {
+#NthChildPseudoClass .item {
     max-width: 100%;
     border: 1px solid var(--clr-light-gray-2);
     font-size: 1.25em;
@@ -1168,27 +1168,27 @@ gradient-text-button>button:focus {
     font-weight: 600;
 }
 
-#nth-child-pseudo-class.active1>div>div:nth-child(9) {
+#NthChildPseudoClass.active1>div>div:nth-child(9) {
     background-color: var(--clr-green-6);
 }
 
-#nth-child-pseudo-class.active2>div>div:nth-child(odd) {
+#NthChildPseudoClass.active2>div>div:nth-child(odd) {
     background-color: var(--clr-green-6);
 }
 
-#nth-child-pseudo-class.active3>div>div:nth-child(even) {
+#NthChildPseudoClass.active3>div>div:nth-child(even) {
     background-color: var(--clr-green-6);
 }
 
-#nth-child-pseudo-class.active4>div>div:nth-child(n) {
+#NthChildPseudoClass.active4>div>div:nth-child(n) {
     background-color: var(--clr-green-6);
 }
 
-#nth-child-pseudo-class.active5>div>div:nth-child(3n) {
+#NthChildPseudoClass.active5>div>div:nth-child(3n) {
     background-color: var(--clr-green-6);
 }
 
-#nth-child-pseudo-class.active6>div>div:nth-child(3n + 2) {
+#NthChildPseudoClass.active6>div>div:nth-child(3n + 2) {
     background-color: var(--clr-green-6);
 }
 
@@ -1251,13 +1251,13 @@ gradient-text-button>button:focus {
 
 /* MODALS */
 
-#modals button {
+#Modals button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-#modals>button {
+#Modals>button {
     font-size: 1.2rem;
     padding: .8em;
     aspect-ratio: 1;
@@ -1274,7 +1274,7 @@ gradient-text-button>button:focus {
     }
 }
 
-#modals>dialog {
+#Modals>dialog {
     position: fixed;
     margin: auto;
     padding: 2em;
@@ -1285,36 +1285,36 @@ gradient-text-button>button:focus {
     transition: all .3s allow-discrete;
 }
 
-#modals>dialog[open] {
+#Modals>dialog[open] {
     opacity: 1;
 }
 
-#modals>dialog::backdrop {
+#Modals>dialog::backdrop {
     background-color: rgba(0, 0, 0, 0);
     transition: all .3s allow-discrete;
 }
 
-#modals>dialog[open]::backdrop {
+#Modals>dialog[open]::backdrop {
     background-color: var(--clr-black-transparent-1);
 }
 
 @starting-style {
-    #modals>dialog[open] {
+    #Modals>dialog[open] {
         opacity: 0;
     }
 
-    #modals>dialog[open]::backdrop {
+    #Modals>dialog[open]::backdrop {
         background-color: rgba(0, 0, 0, 0);
     }
 }
 
-#modals>dialog>p {
+#Modals>dialog>p {
     max-width: 40ch;
     margin-block: 1em;
     color: #333;
 }
 
-#modals>dialog>button {
+#Modals>dialog>button {
     background-color: var(--clr-black);
     color: #ddd;
     padding: .5em 1em;
@@ -1328,7 +1328,7 @@ gradient-text-button>button:focus {
 
 /* INTERPOLATE SIZE 1 */
 
-#interpolate-size1>div>button {
+#InterpolateSize1>div>button {
     background-color: var(--clr-green-4);
     border: none;
     font-size: 1.1rem;
@@ -1343,7 +1343,7 @@ gradient-text-button>button:focus {
     }
 }
 
-#interpolate-size1>div>div {
+#InterpolateSize1>div>div {
     background-color: var(--clr-green-3);
     padding: .5em 1em;
     color: #ddd;
@@ -1368,20 +1368,20 @@ gradient-text-button>button:focus {
 
 /* SUBGRID */
 
-#subgrid {
+#Subgrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.2rem;
     font-size: 1rem;
 }
 
-#subgrid img {
+#Subgrid img {
     max-width: 100%;
     display: block;
     height: auto;
 }
 
-#subgrid>div {
+#Subgrid>div {
     background-color: var(--clr-white-1);
     border: 1px solid var(--clr-white-3);
     border-radius: .5rem;
@@ -1394,13 +1394,13 @@ gradient-text-button>button:focus {
     margin-bottom: .5em;
 }
 
-#subgrid>div>p {
+#Subgrid>div>p {
     font-size: .8rem;
 }
 
 /* USER VALID FORM */
 
-#user-valid-form>form {
+#UserValidForm>form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1416,7 +1416,7 @@ gradient-text-button>button:focus {
     margin: 2rem auto;
 }
 
-#user-valid-form>form>label {
+#UserValidForm>form>label {
     align-self: flex-start;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
@@ -1425,7 +1425,7 @@ gradient-text-button>button:focus {
     text-transform: uppercase;
 }
 
-#user-valid-form>form>input {
+#UserValidForm>form>input {
     background: none;
     border: 1px solid var(--clr-white-3);
     outline: none;
@@ -1439,29 +1439,29 @@ gradient-text-button>button:focus {
     transition: all 0.3s ease;
 }
 
-#user-valid-form>form>input:focus {
+#UserValidForm>form>input:focus {
     border-color: var(--clr-blue-1);
     box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
 }
 
-#user-valid-form>form>input:user-valid {
+#UserValidForm>form>input:user-valid {
     border-color: #01a925;
     /* background-color: rgba(1, 169, 37, 0.02); */
 }
 
-#user-valid-form>form>input:user-invalid {
+#UserValidForm>form>input:user-invalid {
     border-color: #b51a1a;
     background-color: rgba(181, 26, 26, 0.02);
 }
 
-#user-valid-form>form>input:placeholder-shown:not(:focus):not(:placeholder-shown) {
+#UserValidForm>form>input:placeholder-shown:not(:focus):not(:placeholder-shown) {
     border-color: #b51a1a;
     background-color: rgba(181, 26, 26, 0.02);
     box-shadow: 0 0 0 4px rgba(181, 26, 26, 0.1);
 }
 
 /* Add submit button styles */
-#user-valid-form>form>button {
+#UserValidForm>form>button {
     width: 100%;
     padding: 1rem;
     background: linear-gradient(45deg, var(--clr-blue-1), var(--clr-blue-2));
@@ -1474,21 +1474,21 @@ gradient-text-button>button:focus {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#user-valid-form>form>button:hover {
+#UserValidForm>form>button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
 }
 
 /* INTERPOLATE SIZE 2 */
 
-#interpolate-size2>div {
+#InterpolateSize2>div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 200px;
 }
 
-#interpolate-size2>div>div {
+#InterpolateSize2>div>div {
     display: flex;
     align-items: center;
     padding: .5rem;
@@ -1510,21 +1510,21 @@ gradient-text-button>button:focus {
     }
 }
 
-#interpolate-size2>div>div>p {
+#InterpolateSize2>div>div>p {
     text-wrap: unset;
     margin-left: 1rem;
     color: var(--clr-gray-1);
     display: block;
 }
 
-#interpolate-size2 svg {
+#InterpolateSize2 svg {
     fill: #777;
     min-width: 24px;
 }
 
 /* GRID WRAPPING */
 
-h1:has(+ section#grid-wrapping) {
+h1:has(+ section#GridWrapping) {
     position: relative;
 
     &::after {
@@ -1546,17 +1546,17 @@ h1:has(+ section#grid-wrapping) {
     }
 }
 
-#grid-wrapping {
-    display: grid;
+#GridWrapping {
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: .5rem;
     justify-content: center;
-    resize: horizontal;
+    /* resize: horizontal; */
     overflow: auto;
     transition: width 2s ease-in-out;
 }
 
-#grid-wrapping .card {
+#GridWrapping .card {
     padding: 2em;
     border: 1px solid var(--clr-light-gray-2);
     border-radius: .8rem;
@@ -1565,8 +1565,8 @@ h1:has(+ section#grid-wrapping) {
     color: #ddd;
 }
 
-#grid-wrapping p {
-    font-size: .em;
+#GridWrapping p {
+    font-size: 1em;
     color: inherit;
 }
 
@@ -1664,7 +1664,7 @@ h1:has(+ section#grid-wrapping) {
 
 /* IMAGE GALLERY 2 */
 
-h1:has(+ section#image-gallery2) {
+h1:has(+ section#ImageGallery2) {
     position: relative;
     --text: 'Add Reflect';
 
@@ -1686,7 +1686,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#image-gallery2 {
+#ImageGallery2 {
     gap: .25rem;
     transform-style: preserve-3d;
     pointer-events: none;
@@ -1698,7 +1698,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#image-gallery2>div {
+#ImageGallery2>div {
     flex: 1;
     aspect-ratio: 1 / 1.5;
     cursor: pointer;
@@ -1716,11 +1716,11 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#image-gallery2>div>div {
+#ImageGallery2>div>div {
     border-radius: inherit;
 }
 
-#image-gallery2 img {
+#ImageGallery2 img {
     aspect-ratio: 1 / 1.5;
     height: 100%;
     object-fit: cover;
@@ -1733,13 +1733,13 @@ h1:has(+ section#image-gallery2) {
 
 /* HOVER 1, HOVER 2 */
 
-#hover1,
-#hover2 {
+#Hover1,
+#Hover2 {
     gap: 1rem;
 }
 
-#hover1>div,
-#hover2>div {
+#Hover1>div,
+#Hover2>div {
     position: relative;
     width: 8rem;
     aspect-ratio: 1;
@@ -1762,11 +1762,11 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#hover1:hover>:not(:hover) {
+#Hover1:hover>:not(:hover) {
     opacity: .5;
 }
 
-#hover2>div:hover {
+#Hover2>div:hover {
     transform: scale(1.5);
     margin-inline: 2rem;
 
@@ -1777,12 +1777,12 @@ h1:has(+ section#image-gallery2) {
 
 /* RADIO BUTTON 1 */
 
-#radio-button1 {
+#RadioButton1 {
     flex-direction: column;
     align-items: center;
 }
 
-#radio-button1 .card {
+#RadioButton1 .card {
     display: flex;
     background-color: var(--primary-color);
     box-shadow: var(--shadow-main);
@@ -1794,13 +1794,13 @@ h1:has(+ section#image-gallery2) {
     justify-content: space-around;
 }
 
-#radio-button1 .card>p {
+#RadioButton1 .card>p {
     color: inherit;
     font-size: 1.3rem;
     margin-right: 2rem;
 }
 
-#radio-button1 .card>div {
+#RadioButton1 .card>div {
     display: flex;
     background-color: var(--secondary-color);
     border-radius: 2.2rem;
@@ -1809,7 +1809,7 @@ h1:has(+ section#image-gallery2) {
     /* border: 1px solid #494949; */
 }
 
-#radio-button1 svg {
+#RadioButton1 svg {
     fill: rgb(242, 242, 242);
     height: 3.6rem;
     width: 3.6rem;
@@ -1817,31 +1817,31 @@ h1:has(+ section#image-gallery2) {
     padding: 0.2rem;
 }
 
-#radio-button1 .card:last-child svg {
+#RadioButton1 .card:last-child svg {
     height: 3rem;
     width: 3rem;
     margin: 0.5rem;
 }
 
-#radio-button1 label {
+#RadioButton1 label {
     position: relative;
 }
 
-#radio-button1 input[type="radio"] {
+#RadioButton1 input[type="radio"] {
     position: absolute;
     opacity: 0;
 }
 
-#radio-button1 input[type="radio"]+svg {
+#RadioButton1 input[type="radio"]+svg {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
-#radio-button1 input+svg {
+#RadioButton1 input+svg {
     cursor: pointer;
 }
 
-#radio-button1 input.super-happy {
+#RadioButton1 input.super-happy {
 
     &:hover+svg,
     &:checked+svg,
@@ -1850,7 +1850,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#radio-button1 input.happy {
+#RadioButton1 input.happy {
 
     &:hover+svg,
     &:checked+svg,
@@ -1859,7 +1859,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#radio-button1 input.neutral {
+#RadioButton1 input.neutral {
 
     &:hover+svg,
     &:checked+svg,
@@ -1868,7 +1868,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#radio-button1 input.sad {
+#RadioButton1 input.sad {
 
     &:hover+svg,
     &:checked+svg,
@@ -1877,7 +1877,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#radio-button1 input.super-sad {
+#RadioButton1 input.super-sad {
 
     &:hover+svg,
     &:checked+svg,
@@ -1888,7 +1888,7 @@ h1:has(+ section#image-gallery2) {
 
 /* RADIO BUTTON 2 */
 
-#radio-button2 form {
+#RadioButton2 form {
     display: grid;
     background: var(--background-light);
     /* border: var(--border-light); */
@@ -1905,12 +1905,12 @@ h1:has(+ section#image-gallery2) {
     position: relative;
 }
 
-#radio-button2 label {
+#RadioButton2 label {
     cursor: pointer;
     color: var(--text-color);
 }
 
-#radio-button2>form>div {
+#RadioButton2>form>div {
     display: inline-block;
     width: 80px;
     aspect-ratio: 2 / 1;
@@ -1921,7 +1921,7 @@ h1:has(+ section#image-gallery2) {
     cursor: pointer;
 }
 
-#radio-button2 input {
+#RadioButton2 input {
     z-index: 2;
     opacity: 0;
     cursor: pointer;
@@ -1935,8 +1935,8 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#radio-button2 input,
-#radio-button2 .check-indicator {
+#RadioButton2 input,
+#RadioButton2 .check-indicator {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1947,7 +1947,7 @@ h1:has(+ section#image-gallery2) {
     margin: 0;
 }
 
-#radio-button2 .check-indicator {
+#RadioButton2 .check-indicator {
     background: var(--clr-white-3);
     transition: background 0.25s ease;
 
@@ -1966,7 +1966,7 @@ h1:has(+ section#image-gallery2) {
 
 /* TODO List */
 
-#todo-list .card {
+#TodoList .card {
     background-color: var(--background-light);
     border: var(--border-light);
     box-shadow: var(--shadow-3);
@@ -1977,12 +1977,12 @@ h1:has(+ section#image-gallery2) {
     border-radius: .7rem;
 }
 
-#todo-list>.card>ul {
+#TodoList>.card>ul {
     list-style-type: none;
     border-radius: inherit;
 }
 
-#todo-list>.card>ul>li {
+#TodoList>.card>ul>li {
     padding: 1rem;
     color: var(--clr-black-2);
     border: var(--border-light);
@@ -1992,7 +1992,7 @@ h1:has(+ section#image-gallery2) {
     justify-content: space-between;
 }
 
-#todo-list>.card>ul>.checked {
+#TodoList>.card>ul>.checked {
     border-color: var(--clr-blue-1);
     box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
 
@@ -2001,25 +2001,25 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#todo-list>.card>ul>li>p {
+#TodoList>.card>ul>li>p {
     max-width: 20ch;
     word-wrap: break-word;
 }
 
-#todo-list>.card>ul>li>div {
+#TodoList>.card>ul>li>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
 
-#todo-list>.card>ul>li>div>svg,
-#todo-list>.card>ul>li>div>input {
+#TodoList>.card>ul>li>div>svg,
+#TodoList>.card>ul>li>div>input {
     cursor: pointer;
 }
 
 
-#todo-list>.card>ul>li>div>ul {
+#TodoList>.card>ul>li>div>ul {
     position: absolute;
     top: 100%;
     display: none;
@@ -2040,7 +2040,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#todo-list>.card>ul>li>div>.options-menu {
+#TodoList>.card>ul>li>div>.options-menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -2053,7 +2053,7 @@ h1:has(+ section#image-gallery2) {
     min-width: 120px;
 }
 
-#todo-list>.card>button {
+#TodoList>.card>button {
     border: var(--border-light);
     outline: none;
     border-radius: inherit;
@@ -2066,12 +2066,12 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#todo-list>.card>button svg {
+#TodoList>.card>button svg {
     transition: 1s;
     fill: white;
 }
 
-#todo-list>.card>dialog {
+#TodoList>.card>dialog {
     position: fixed;
     margin: auto;
     padding: 2em;
@@ -2097,7 +2097,7 @@ h1:has(+ section#image-gallery2) {
 }
 
 @starting-style {
-    #todo-list .card dialog[open] {
+    #TodoList .card dialog[open] {
         opacity: 0;
 
         &::backdrop {
@@ -2106,7 +2106,7 @@ h1:has(+ section#image-gallery2) {
     }
 }
 
-#todo-list>.card>dialog>input {
+#TodoList>.card>dialog>input {
     background: none;
     border: var(--border-light);
     outline: none;
@@ -2116,7 +2116,7 @@ h1:has(+ section#image-gallery2) {
     font-size: 1rem;
 }
 
-#todo-list>.card>dialog>button {
+#TodoList>.card>dialog>button {
     background-color: var(--clr-black);
     color: #ddd;
     padding: .5rem;
@@ -2128,9 +2128,69 @@ h1:has(+ section#image-gallery2) {
     cursor: pointer;
 }
 
+/* CALCULATOR */
+
+#Calculator>div {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0 0% 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#Calculator input {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 5rem;
+    color: white;
+    text-align: left;
+    border: none;
+    background-color: hsl(0 0% 20%);
+}
+
+#Calculator .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem;
+    padding: 1.5rem;
+
+    &>button:nth-child(4n + 1) {
+        background-color: hsl(35, 100%, 55%);
+
+        &:hover {
+            background-color: hsl(35, 100%, 65%);
+        }
+
+        &:active {
+            background-color: hsl(35, 100%, 75%);
+        }
+    }
+}
+
+#Calculator button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    &:active {
+        background-color: hsl(0, 0%, 50%);
+    }
+}
+
 /* DROPDOWN 1 */
 
-#Dropdown1 {
+/* #Dropdown1 {
     --_clr-green-1: #198754;
     --_clr-green-2: #12663f;
     --_clr-white-1: #acacac;
@@ -2175,7 +2235,7 @@ h1:has(+ section#image-gallery2) {
 #Dropdown1 .dropdown a:hover {
     background-color: var(--_clr-white-1);
     cursor: pointer;
-}
+} */
 
 /* DROPDOWN 2 */
 

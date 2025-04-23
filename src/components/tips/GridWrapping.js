@@ -52,7 +52,7 @@ const GridWrapping = () => {
     return (
         <>
             <h1 onClick={handlePreview}>Grid Wrapping</h1>
-            <section ref={gridWrappingRef} id="grid-wrapping" style={{ width: gridWidth }}>
+            <section ref={gridWrappingRef} id="GridWrapping" style={{ width: gridWidth }}>
                 {cards}
             </section>
         </>

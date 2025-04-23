@@ -7,7 +7,7 @@ const InterpolateSize1 = () => {
     return (
         <>
             <h1>Interpolate Size 1</h1>
-            <section id="interpolate-size1">
+            <section id="InterpolateSize1">
                 <div>
                     <button onClick={handleOpen}>Click me</button>
                     <div ref={divRef}>

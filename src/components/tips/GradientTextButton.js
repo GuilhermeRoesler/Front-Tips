@@ -4,7 +4,7 @@ const GradientTextButton = () => {
     return (
         <>
             <h1>Gradient Text Button</h1>
-            <section id="gradient-text-button">
+            <section id="GradientTextButton">
                 <button>My Button</button>
             </section>
         </>

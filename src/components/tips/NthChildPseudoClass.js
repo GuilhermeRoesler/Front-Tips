@@ -24,7 +24,7 @@ const NthChildPseudoClass = () => {
     return (
         <>
             <h1>:nth-child() Pseudo-Class</h1>
-            <section className={activeClass} id="nth-child-pseudo-class">
+            <section className={activeClass} id="NthChildPseudoClass">
                 <div>
                     {[...Array(15)].map((_, i) => (
                         <div key={i} className='item'>{i + 1}</div>

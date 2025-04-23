@@ -4,7 +4,7 @@ const ClipPath = () => {
     return (
         <>
             <h1>Clip Path</h1>
-            <section id="clip-path">
+            <section id="ClipPath">
                 <div className="blur-load"
                     style={{backgroundImage: 'url(./img/lake-small.webp)', clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}}>
                     <img 

@@ -4,7 +4,7 @@ const Inset2 = () => {
     return (
         <>
             <h1>Inset 2</h1>
-            <section id="inset2">
+            <section id="Inset2">
                 <div>
                     <div></div>
                 </div>

@@ -8,7 +8,7 @@ const AutoHide = () => {
     return (
         <>
             <h1>Auto Hide</h1>
-            <section id="auto-hide">
+            <section id="AutoHide">
                 <div onClick={click}>
                     <div>Hello World</div>
                     <div>

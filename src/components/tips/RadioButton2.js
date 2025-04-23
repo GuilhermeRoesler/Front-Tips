@@ -29,7 +29,7 @@ const RadioButton2 = () => {
     return (
         <>
             <h1>Radio Button 2</h1>
-            <section id="radio-button2">
+            <section id="RadioButton2">
                 <form>
                     {cards}
                 </form>

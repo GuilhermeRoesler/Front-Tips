@@ -4,7 +4,7 @@ const DetailsAndSummary = () => {
     return (
         <>
             <h1>Details and Summary</h1>
-            <section id="details-and-summary">
+            <section id="DetailsAndSummary">
                 <div>
                     <details>
                         <summary>Can I animate details/summary elements?</summary>

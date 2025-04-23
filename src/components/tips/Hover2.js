@@ -5,7 +5,7 @@ const Hover2 = () => {
         <>
             <h1>Hover 2</h1>
 
-            <section id="hover2">
+            <section id="Hover2">
                 <div></div>
                 <div></div>
                 <div></div>

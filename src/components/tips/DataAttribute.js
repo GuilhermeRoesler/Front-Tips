@@ -4,7 +4,7 @@ const DataAttribute = () => {
     return (
         <>
             <h1>Data Attribute</h1>
-            <section id="data-attribute">
+            <section id="DataAttribute">
                 <div data-label="free" data-level="basic">
                     <div className="blur-load" style={{backgroundImage: 'url(img/course1-small.webp)'}}>
                         <img width="700" height="367" loading="lazy" src="img/course1.webp" alt="course 1" />

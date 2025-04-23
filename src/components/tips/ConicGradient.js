@@ -4,7 +4,7 @@ const ConicGradient = () => {
     return (
         <>
             <h1>Conic Gradient</h1>
-            <section id="conic-gradient">
+            <section id="ConicGradient">
                 <div></div>
             </section>
         </>

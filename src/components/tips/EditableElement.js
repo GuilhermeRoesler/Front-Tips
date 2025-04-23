@@ -4,7 +4,7 @@ const EditableElement = () => {
     return (
         <>
             <h1>Editable Element</h1>
-            <section id="editable-element">
+            <section id="EditableElement">
                 <div>
                     <p contentEditable="true" spellCheck='false'>The "contenteditable" attribute in HTML is a feature that
                         allows users to edit the content directly within the browser. It enables users to interactively
