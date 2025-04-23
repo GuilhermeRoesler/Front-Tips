@@ -13,7 +13,6 @@ import DarkmodeSwitch from './pages/DarkmodeSwitch';
 import Snowfall from './pages/Snowfall';
 import Plans from './pages/Plans';
 import Tips from './pages/Tips'
-import WannaDate from './pages/WannaDate';
 
 function App() {
   useBlurLoad()
@@ -32,7 +31,6 @@ function App() {
         <Route path='/snowfall' element={<Snowfall />} />
         <Route path='/plans' element={<Plans />} />
         <Route path='/tips' element={<Tips />} />
-        <Route path='/wanna-date' element={<WannaDate />} />
       </Routes>
     </Layout>
   );

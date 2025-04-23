@@ -1572,18 +1572,18 @@ h1:has(+ section#grid-wrapping) {
 
 /* IMAGE GALLERY 1 */
 
-#image-gallery1 {
+#ImageGallery1 {
     gap: 1rem;
     height: 450px;
     /* contain: content; */
     will-change: transform, filter, flex;
 }
 
-#image-gallery1:has(>div:hover)>div:not(:hover) img {
+#ImageGallery1:has(>div:hover)>div:not(:hover) img {
     filter: grayscale(100%);
 }
 
-#image-gallery1>div {
+#ImageGallery1>div {
     flex: 1;
     border-radius: .75rem;
     overflow: hidden;
@@ -1603,11 +1603,11 @@ h1:has(+ section#grid-wrapping) {
     }
 }
 
-#image-gallery1>div>div {
+#ImageGallery1>div>div {
     height: 100%;
 }
 
-#image-gallery1 img {
+#ImageGallery1 img {
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -1617,11 +1617,11 @@ h1:has(+ section#grid-wrapping) {
 
 /* COOL ANIMATIONS 1 */
 
-#cool-animations1 {
+#CoolAnimations1 {
     padding: 2rem;
 }
 
-#cool-animations1>div {
+#CoolAnimations1>div {
     position: relative;
     width: 160px;
     aspect-ratio: 1;
@@ -1653,7 +1653,7 @@ h1:has(+ section#grid-wrapping) {
     }
 }
 
-#cool-animations1>div>div>img {
+#CoolAnimations1>div>div>img {
     display: block;
     max-width: 100%;
     aspect-ratio: 1;
@@ -3490,6 +3490,68 @@ label,
 #WannaDate>dialog[open]::backdrop {
     background-color: var(--clr-black-transparent-1);
 }
+
+/* CALCULATOR */
+
+#Calculator>div {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0 0% 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#Calculator input {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 5rem;
+    color: white;
+    text-align: left;
+    border: none;
+    background-color: hsl(0 0% 20%);
+}
+
+#Calculator .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem;
+    padding: 1.5rem;
+
+    &>button:nth-child(4n + 1) {
+        background-color: hsl(35, 100%, 55%);
+
+        &:hover {
+            background-color: hsl(35, 100%, 65%);
+        }
+
+        &:active {
+            background-color: hsl(35, 100%, 75%);
+        }
+    }
+}
+
+#Calculator button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    &:active {
+        background-color: hsl(0, 0%, 50%);
+    }
+}
+
+/* STARTING-STYLE */
 
 @starting-style {
     #WannaDate>dialog[open] {

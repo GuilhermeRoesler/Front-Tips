@@ -35,6 +35,7 @@ import Hover2 from '../components/tips/Hover2';
 import RadioButton1 from '../components/tips/RadioButton1';
 import RadioButton2 from '../components/tips/RadioButton2';
 import TodoList from '../components/tips/TodoList';
+import Calculator from '../components/tips/Calculator';
 
 const Tips = () => {
     return (
@@ -74,6 +75,7 @@ const Tips = () => {
             <RadioButton1 />
             <RadioButton2 />
             <TodoList />
+            <Calculator />
         </main>
     )
 }

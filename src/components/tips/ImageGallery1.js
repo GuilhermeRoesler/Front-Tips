@@ -25,7 +25,7 @@ const ImageGallery1 = () => {
     return (
         <>
             <h1>Image Gallery 1</h1>
-            <section id="image-gallery1">
+            <section id="ImageGallery1">
                 {cards}
             </section>
         </>
