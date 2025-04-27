@@ -36,6 +36,8 @@ import RadioButton1 from '../components/tips/RadioButton1';
 import RadioButton2 from '../components/tips/RadioButton2';
 import TodoList from '../components/tips/TodoList';
 import Calculator from '../components/tips/Calculator';
+import HappyBirthday from '../components/tips/HappyBirthday';
+import WhatsAppWeb from '../components/tips/WhatsAppWeb';
 
 const Tips = () => {
     return (
@@ -76,6 +78,8 @@ const Tips = () => {
             <RadioButton2 />
             <TodoList />
             <Calculator />
+            <HappyBirthday />
+            <WhatsAppWeb />
         </main>
     )
 }

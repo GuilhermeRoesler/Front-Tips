@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 :root {
     /* COLORS */
@@ -2188,6 +2189,190 @@ h1:has(+ section#ImageGallery2) {
     }
 }
 
+/* HAPPY BIRTHDAY */
+
+#HappyBirthday .card {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#HappyBirthday p {
+    font-size: 4rem;
+    animation: bounce 1s alternate infinite;
+}
+
+#HappyBirthday h2 {
+    font-size: 3rem;
+    font-family: 'Poppins';
+    color: #F9627D;
+}
+
+/* WHATSAPP WEB */
+
+#WhatsAppWeb {
+    /* standard colors */
+    --_clr-send-button: #3A5949;
+    --_clr-send-button-hv: #416854;
+    --_clr-text: #243e36;
+    --_clr-timestamp: #53695e;
+
+    /* light mode colors */
+    --_clr-chat-bg: #77A68E;
+    --_clr-wpp-bg: #F1F7ED;
+    --_clr-contacts: #deecd5;
+    --_clr-contacts-hv: #d7e4cf;
+    --_clr-sent: #11c46a;
+    --_clr-reciever: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    #WhatsAppWeb {
+        --_clr-sent: #027e40;
+    }
+}
+
+#WhatsAppWeb .card {
+    background-color: #F1F7ED;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 500px;
+    min-width: 500px;
+    height: 700px;
+    width: 700px;
+    padding: 1.2rem 1.2rem 1.2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .20);
+}
+
+#WhatsAppWeb .contacts {
+    padding: .3rem;
+    transition: .3s;
+}
+
+#WhatsAppWeb .contacts>p {
+    font-family: 'Lexend';
+    color: #243e36;
+    user-select: none;
+}
+
+#WhatsAppWeb .contacts #Contact {
+    background-color: #deecd5;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 15px;
+    font-family: 'Lexend';
+    font-size: .9rem;
+    color: #243e36; 
+    user-select: none;
+    transition: .3s;
+
+    &:hover {
+        background-color: #d7e4cf;
+    }
+}
+
+#WhatsAppWeb .contacts #Contact .photo {
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    grid-row: 1 / span 2;
+}
+
+#WhatsAppWeb .body {
+    background-color: #77A68E;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+#WhatsAppWeb .body .chat {
+    padding: .8rem;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#WhatsAppWeb .body .chat .chat-header {       
+    
+}
+
+#WhatsAppWeb .body .chat #Message {
+    font-family: 'Lexend';
+    display: flex;
+    width: fit-content;
+    font-size: .9rem;
+    position: relative;
+}
+
+#WhatsAppWeb .body .chat #Message p:first-child {
+    margin-right: 1.8rem;
+}
+
+#WhatsAppWeb .body .chat .message-sent {
+    background-color: var(--_clr-sent);
+    margin-left: auto;
+    padding: .8rem;
+    border-radius: 15px;
+}
+
+#WhatsAppWeb .body .chat .message-received {
+    background-color: #ffffff;
+    text-align: left;
+    padding: .8rem;
+    border-radius: 15px;
+}
+
+#WhatsAppWeb .body .chat .timestamp {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-size: .7rem;
+    color: #53695e;
+}
+
+#WhatsAppWeb .body .typer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    display: flex;
+}
+
+#WhatsAppWeb .body .typer input {
+    flex: 1;
+    padding: .5rem;
+    border: none;
+    font-family: 'Lexend';
+    outline: none;
+}
+
+#WhatsAppWeb .body .typer button {
+    background-color: #3A5949;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+
+    &:hover {
+        background-color: #416854;
+    }
+}
+
 /* DROPDOWN 1 */
 
 /* #Dropdown1 {
@@ -3716,5 +3901,17 @@ label,
 
     100% {
         rotate: 0deg;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
     }
 }
