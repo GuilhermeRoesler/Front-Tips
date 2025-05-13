@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   /* COLORS */
@@ -88,8 +92,14 @@ main {
 
 #Tips>h1 {
   text-align: center;
-  padding: 100px;
+  padding: 3rem;
   text-transform: capitalize;
+  font-family: 'Lexend';
+  counter-increment: h1-counter;
+
+  &::before {
+    content: counter(h1-counter) '. ';
+  }
 }
 
 p,
@@ -99,12 +109,13 @@ li {
   color: var(--text-color);
 }
 
-#Tips section {
+#Tips>section {
   width: 75%;
   height: auto;
   display: flex;
   justify-content: center;
   margin-inline: auto;
+  padding: 4rem;
 }
 
 img {
@@ -118,6 +129,40 @@ img {
   object-position: center;
   object-fit: cover;
   width: 100%;
+}
+
+dialog {
+  position: fixed;
+  margin: auto;
+  padding: 2rem;
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-main);
+  opacity: 0;
+  transition: all .3s allow-discrete;
+
+  &[open] {
+    opacity: 1;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s allow-discrete;
+  }
+
+  &[open]::backdrop {
+    background-color: var(--clr-black-transparent-1);
+  }
+}
+
+@starting-style {
+  dialog {
+    opacity: 0;
+  }
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 div:has(>img) {
@@ -335,16 +380,6 @@ article {
     opacity: 0;
   }
 }
-
-/* COUNTERS */
-
-h1 {
-  counter-increment: h1-counter;
-}
-
-/* h1::before {
-    content: counter(h1-counter) '. ';
-} */
 
 /* HEADER */
 
@@ -1170,27 +1205,27 @@ gradient-text-button>button:focus {
   font-weight: 600;
 }
 
-#NthChildPseudoClass.active1>div>div:nth-child(9) {
+#NthChildPseudoClass .active1 .item:nth-child(9) {
   background-color: var(--clr-green-6);
 }
 
-#NthChildPseudoClass.active2>div>div:nth-child(odd) {
+#NthChildPseudoClass .active2 .item:nth-child(odd) {
   background-color: var(--clr-green-6);
 }
 
-#NthChildPseudoClass.active3>div>div:nth-child(even) {
+#NthChildPseudoClass .active3 .item:nth-child(even) {
   background-color: var(--clr-green-6);
 }
 
-#NthChildPseudoClass.active4>div>div:nth-child(n) {
+#NthChildPseudoClass .active4 .item:nth-child(n) {
   background-color: var(--clr-green-6);
 }
 
-#NthChildPseudoClass.active5>div>div:nth-child(3n) {
+#NthChildPseudoClass .active5 .item:nth-child(3n) {
   background-color: var(--clr-green-6);
 }
 
-#NthChildPseudoClass.active6>div>div:nth-child(3n + 2) {
+#NthChildPseudoClass .active6 .item:nth-child(3n + 2) {
   background-color: var(--clr-green-6);
 }
 
@@ -1781,6 +1816,7 @@ h1:has(+ section#ImageGallery2) {
 #RadioButton1 {
   flex-direction: column;
   align-items: center;
+  width: unset !important;
 }
 
 #RadioButton1 .card {
@@ -2213,11 +2249,77 @@ h1:has(+ section#ImageGallery2) {
   color: #F9627D;
 }
 
+/* IFRAME */
+
+/* CROP IMAGE */
+
+#CropImage {
+  background-color: #111827;
+}
+
+#CropImage .card {
+  min-height: 75vh;
+  width: 100%;
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#CropImage .ImageCropper {
+  display: block;
+  margin-bottom: .75rem;
+  width: 100%;
+}
+
+#CropImage .ImageCropper span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#CropImage .ImageCropper input {
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #64748b;
+  font-family: 'Lexend';
+
+  &::file-selector-button {
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    border: none;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    background-color: #374151;
+    color: #7dd3fc;
+    font-family: 'Lexend';
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  &::file-selector-button:hover {
+    background-color: #4b5563;
+  }
+}
+
 /* WHATSAPP WEB */
 
 #WhatsAppWeb {
   /* standard colors */
   --_clr--no-photo-default: #b1b1b1;
+  --_clr-error-message-text: #FD1115;
+  --_clr-error-messege-bg: #E5E5E5;
+  --_clr-error-messege-button: #bdbdbd;
+  --_clr-error-message-black: #000000;
+  --_clr-sucess-message-text: #4caf50;
 
   /* light mode colors */
   --_clr-chat-bg: #77a68e;
@@ -2227,6 +2329,7 @@ h1:has(+ section#ImageGallery2) {
   --_clr-sent: #11c46a;
   --_clr-reciever: #ffffff;
   --_clr-timestamp: #53695e;
+  --_clr-login-register-here: #11664C;
   --_clr-text: #243e36;
   --_clr-buttons: #33c2b1;
   --_clr-buttons-hv: #30b3a3;
@@ -2241,7 +2344,8 @@ h1:has(+ section#ImageGallery2) {
   #WhatsAppWeb {
     --_clr-sent: #027e40;
     --_clr-reciever: #292b2a;
-    --_clr-timestamp: #94f9da;
+    --_clr-timestamp: #E0F5F0;
+    --_clr-login-register-here: #E0F5F0;
     --_clr-chat-bg: #2b3f34;
     --_clr-wpp-bg: #262726;
     --_clr-contacts: #272F29;
@@ -2249,7 +2353,7 @@ h1:has(+ section#ImageGallery2) {
     --_clr-send-button-hv: #2C764F;
     --_clr-login: #027e40;
     --_clr-login-shadow: #04552C;
-    --_clr-text: #B8F5E2;
+    --_clr-text: #D0F1E7;
     --_clr-buttons: #157267;
     --_clr-buttons-hv: #115a51;
     --_clr-input: #daf7ee;
@@ -2264,12 +2368,12 @@ h1:has(+ section#ImageGallery2) {
   background-color: var(--_clr-wpp-bg);
   position: relative;
   display: grid;
-  grid-template-columns: 8% auto 57%;
+  grid-template-columns: auto 57%;
   min-height: 500px;
   min-width: 500px;
   width: 765px;
   height: 700px;
-  padding: 1.2rem 1.2rem 1.2rem 0;
+  padding: 1.2rem 1.2rem 1.2rem 65px;
   border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, .20);
 }
@@ -2285,7 +2389,7 @@ h1:has(+ section#ImageGallery2) {
   border-radius: inherit;
 }
 
-#WhatsAppWeb .login-shadow {
+#WhatsAppWeb .auth-shadow {
   background-color: var(--_clr-login-shadow);
   opacity: .8;
   position: absolute;
@@ -2296,6 +2400,11 @@ h1:has(+ section#ImageGallery2) {
   height: 350px;
   border-radius: 60px 5px 60px 60px;
   z-index: 2;
+}
+
+#WhatsAppWeb .register+.auth-shadow {
+  width: 520px;
+  height: 485px;
 }
 
 #WhatsAppWeb .login,
@@ -2316,16 +2425,10 @@ h1:has(+ section#ImageGallery2) {
 }
 
 #WhatsAppWeb .register {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 60% 40%;
-  width: 580px;
-  height: 440px;
-}
-
-#WhatsAppWeb .register+.login-shadow {
-  width: 580px;
-  height: 440px;
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  height: 485px;
 }
 
 #WhatsAppWeb .register h2,
@@ -2341,20 +2444,24 @@ h1:has(+ section#ImageGallery2) {
   user-select: none;
 }
 
-#WhatsAppWeb .login>div:first-of-type,
-#WhatsAppWeb .register>div:first-of-type {
+#WhatsAppWeb .login form,
+#WhatsAppWeb .register form {
   width: 80%;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
 }
 
-#WhatsAppWeb .login>div:last-of-type,
+#WhatsAppWeb .register form {
+  margin-top: 1rem;
+  width: 60%;
+}
+
+#WhatsAppWeb .login>div,
 #WhatsAppWeb .register>div:last-of-type {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: .5rem; */
 }
 
 #WhatsAppWeb .login label,
@@ -2368,7 +2475,7 @@ h1:has(+ section#ImageGallery2) {
 #WhatsAppWeb .login input,
 #WhatsAppWeb .register input {
   background-color: var(--_clr-input);
-  width: 100%px;
+  width: 100%;
   height: 40px;
   padding: .6rem;
   border-radius: 20px;
@@ -2384,16 +2491,9 @@ h1:has(+ section#ImageGallery2) {
   flex-direction: column;
 }
 
-#WhatsAppWeb .register input[type="file"] {
-  font-family: 'Lexend';
-  /* width: 130px; */
-  background: unset;
-  border: unset;
-  border-radius: unset;
-}
-
-#WhatsAppWeb .login button:first-of-type,
-#WhatsAppWeb .register button:first-of-type {
+#WhatsAppWeb .login form button,
+#WhatsAppWeb .register form button,
+#WhatsAppWeb .register>div>div>button {
   background-color: var(--_clr-buttons);
   width: 120px;
   height: 35px;
@@ -2402,22 +2502,24 @@ h1:has(+ section#ImageGallery2) {
   color: var(--_clr-text);
   font-family: 'Lexend';
   font-size: 1rem;
+  font-weight: 500;
   user-select: none;
   cursor: pointer;
   transition: .4s;
-  margin-bottom: .5rem;
+  margin: .5rem auto;
 
   &:hover {
     background-color: var(--_clr-buttons-hv);
   }
 }
 
-#WhatsAppWeb .login button:last-of-type,
-#WhatsAppWeb .register button:last-of-type {
+#WhatsAppWeb .login>div>button,
+#WhatsAppWeb .register>div>button {
   background: none;
   border: none;
   font-family: 'Lexend';
-  color: var(--_clr-timestamp);
+  font-size: .8rem;
+  color: var(--_clr-login-register-here);
   text-decoration: underline;
   user-select: none;
   cursor: pointer;
@@ -2427,37 +2529,135 @@ h1:has(+ section#ImageGallery2) {
 #WhatsAppWeb .register p {
   font-family: 'Lexend';
   font-size: .8rem;
-  color: var(--_clr-timestamp);
+  color: var(--_clr-login-register-here);
   user-select: none;
 }
 
-/* configuration sidebar */
-
-#WhatsAppWeb .config {
-  background-color: var(--_clr-contacts);
+#WhatsAppWeb .register input[type="file"] {
+  background-color: #4CAF50;
+  /* Cor de fundo */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-/* contacts tab */
+/* messages */
 
-#WhatsAppWeb .contacts {
-  padding: 0 .4rem .4rem .4rem;
+#WhatsAppWeb .auth-shadow+.error-message,
+#WhatsAppWeb .auth-shadow+.success-message {
+  background-color: var(--_clr-error-messege-bg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 3;
+  border: 1px solid var(--_clr-error-message-black);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#WhatsAppWeb .auth-shadow+.error-message p,
+#WhatsAppWeb .auth-shadow+.success-message p {
+  font-family: 'Lexend';
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--_clr-error-message-text);
+}
+
+#WhatsAppWeb .auth-shadow+.success-message p {
+  color: var(--_clr-sucess-message-text);
+}
+
+#WhatsAppWeb .auth-shadow+.error-message button,
+#WhatsAppWeb .auth-shadow+.success-message button {
+  background-color: var(--_clr-error-messege-button);
+  padding: .2rem;
+  border: 1px solid var(--_clr-error-message-black);
+  border-radius: 20px;
+  font-family: 'Lexend';
+  font-size: .8rem;
+  color: var(--_clr-error-message-black);
+  margin: .5rem auto 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* Sidebar */
+
+#WhatsAppWeb .Sidebar h2 {
+  font-family: 'Lexend';
+  color: var(--_clr-text);
+  user-select: none;
+  margin: 0 .6rem .6rem;
+}
+
+#WhatsAppWeb .Sidebar div:last-of-type {
+  padding-inline: .4rem;
+}
+
+#WhatsAppWeb .SidebarNavigation {
+  background-color: var(--_clr-contacts);
+  border: 1px solid black;
+  border-radius: 8px 0px 0px 8px;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 65px;
+  padding-block: .8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#WhatsAppWeb .SidebarNavigation div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#WhatsAppWeb .SidebarNavigation button {
+  background-color: var(--_clr-buttons);
+  border-radius: 20px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    background-color: var(--_clr-buttons-hv);
+    scale: 1.1;
+  }
+}
+
+#WhatsAppWeb .SidebarNavigation button i {
+  color: var(--_clr-text);
+}
+
+#WhatsAppWeb .ConversationList {
   transition: .3s;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   gap: .3rem;
 }
 
-#WhatsAppWeb .contacts>p {
-  font-family: 'Lexend';
-  color: var(--_clr-text);
-  user-select: none;
-  margin: 0 .6rem .6rem .35rem;
-  /* ^^ so uns testes pra deixar mais do jeito q eu imaginava se for ruim pd tirar */
-}
-
-#WhatsAppWeb .contacts .contact {
-  display: flex;
+#WhatsAppWeb .ConversationList .Contact {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: repeat(2, 20px);
+  column-gap: .5rem;
   background-color: var(--_clr-contacts);
   cursor: pointer;
   padding: .4rem;
@@ -2473,26 +2673,69 @@ h1:has(+ section#ImageGallery2) {
   }
 }
 
-#WhatsAppWeb .contacts .Contact .photo,
+#WhatsAppWeb .ConversationList .Contact .photo,
 #WhatsAppWeb .conversation .header .no-profile-picture {
   background-color: var(--_clr--no-photo-default);
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  grid-row: 1 / span 2;
 }
 
-#WhatsAppWeb .contacts .Contact div:nth-of-type(2) {
+#WhatsAppWeb .ConversationList .Contact div:nth-of-type(2) {
   flex: 1;
   padding-inline: .4rem;
 }
 
-#WhatsAppWeb .contacts .Contact div:last-of-type {
+#WhatsAppWeb .ConversationList .Contact p:last-of-type {
   text-align: right;
 }
 
-/* conversation tab */
+#WhatsAppWeb .AddContact form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
 
-#WhatsAppWeb .conversation {
+#WhatsAppWeb .AddContact label {
+  font-family: 'Lexend';
+  margin-left: 1rem;
+}
+
+#WhatsAppWeb .AddContact input {
+  margin-bottom: .8rem;
+  margin-top: .2rem;
+  padding: .8rem;
+  background-color: var(--_clr-contacts);
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-family: 'Lexend';
+  font-size: 1rem;
+}
+
+#WhatsAppWeb .AddContact form button {
+  background-color: var(--_clr-buttons);
+  border: none;
+  padding: .7rem;
+  width: 70%;
+  margin: .5rem auto;
+  border-radius: 30px;
+  font-family: 'Lexend';
+  font-size: .9rem;
+  color: white;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    background-color: var(--_clr-buttons-hv);
+    translate: 0 -3px;
+  }
+}
+
+/* Chat */
+
+#WhatsAppWeb .Chat {
   background-color: var(--_clr-chat-bg);
   position: relative;
   border-radius: 8px;
@@ -2502,8 +2745,19 @@ h1:has(+ section#ImageGallery2) {
   overflow: hidden;
 }
 
-#WhatsAppWeb .conversation .header {
+#WhatsAppWeb .Chat.none-selected {
+  background-color: #4ED590;
+
+}
+
+#WhatsAppWeb .Chat.none-selected * {
+  display: none !important;
+}
+
+#WhatsAppWeb .Chat .ChatHeader {
   height: 55px;
+  border: 1px solid black;
+  border-radius: 8px 8px 0px 0px;
   background-color: var(--_clr-reciever);
   font-family: 'Lexend';
   display: flex;
@@ -2511,11 +2765,26 @@ h1:has(+ section#ImageGallery2) {
   padding-inline: 1rem;
 }
 
-#WhatsAppWeb .conversation .header .no-profile-picture {
+#WhatsAppWeb .Chat .ChatHeader .no-profile-picture {
   margin-right: .5rem;
 }
 
-#WhatsAppWeb .conversation .chat {
+#WhatsAppWeb .Chat .ChatHeader div.profile-info {
+  flex: 1;
+}
+
+#WhatsAppWeb .Chat .ChatHeader p:last-of-type {
+  font-size: .8rem;
+  color: var(--_clr-timestamp);
+}
+
+#WhatsAppWeb .Chat .ChatHeader button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#WhatsAppWeb .Chat .ChatConversation {
   padding: .8rem;
   overflow-y: auto;
   flex: 1;
@@ -2524,8 +2793,7 @@ h1:has(+ section#ImageGallery2) {
   gap: 2px;
 }
 
-
-#WhatsAppWeb .conversation .chat #Message {
+#WhatsAppWeb .Chat .ChatMessage {
   font-family: 'Lexend';
   display: flex;
   width: fit-content;
@@ -2533,25 +2801,25 @@ h1:has(+ section#ImageGallery2) {
   position: relative;
 }
 
-#WhatsAppWeb .conversation .chat #Message p:first-child {
+#WhatsAppWeb .Chat .ChatMessage p:first-child {
   margin-right: 1.8rem;
 }
 
-#WhatsAppWeb .conversation .chat .message-sent {
+#WhatsAppWeb .Chat .ChatMessage.sent {
   background-color: var(--_clr-sent);
   margin-left: auto;
   padding: .8rem;
   border-radius: 15px;
 }
 
-#WhatsAppWeb .conversation .chat .message-received {
+#WhatsAppWeb .Chat .ChatMessage.received {
   background-color: var(--_clr-reciever);
   text-align: left;
   padding: .8rem;
   border-radius: 15px;
 }
 
-#WhatsAppWeb .conversation .chat .timestamp {
+#WhatsAppWeb .Chat .ChatMessage .timestamp {
   position: absolute;
   bottom: 4px;
   right: 8px;
@@ -2561,7 +2829,7 @@ h1:has(+ section#ImageGallery2) {
 
 /* typer */
 
-#WhatsAppWeb .conversation .typer {
+#WhatsAppWeb .Chat .ChatTyper {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -2569,7 +2837,7 @@ h1:has(+ section#ImageGallery2) {
   display: flex;
 }
 
-#WhatsAppWeb .conversation .typer input {
+#WhatsAppWeb .Chat .ChatTyper input {
   flex: 1;
   padding: .5rem;
   border: none;
@@ -2577,7 +2845,7 @@ h1:has(+ section#ImageGallery2) {
   outline: none;
 }
 
-#WhatsAppWeb .conversation .typer button {
+#WhatsAppWeb .Chat .ChatTyper button {
   background-color: var(--_clr-send-button);
   padding: .5rem;
   cursor: pointer;
@@ -2586,6 +2854,227 @@ h1:has(+ section#ImageGallery2) {
 
   &:hover {
     background-color: var(--_clr-send-button-hv);
+  }
+}
+
+/* JOKEY APP */
+
+/* CHART JS */
+
+/* FORECAST */
+
+/* IMAGE SEARCHER */
+
+/* CIPHER */
+
+/* TERMO */
+
+#Termo {
+  display: block !important;
+  background-color: #6e5c62;
+  width: 100% !important;
+  padding-inline: 0 !important;
+  font-family: 'Mitr', sans-serif;
+  --_clr-border: #4C4347;
+  --_clr-correct: #3aa394;
+  --_clr-present: #d3ad69;
+  --_clr-absent: #312a2c;
+}
+
+@media (prefers-color-scheme: dark) {
+  #Termo {
+    --_clr-border: #41393c;
+  }
+}
+
+#Termo .Menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#Termo .Menu button {
+  padding: .8rem 1rem;
+  color: #fafaff;
+  font-family: 'Mitr', 'sans-serif';
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: var(--_clr-border);
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  transition: .4s;
+
+  &:hover {
+    background-color: #3b3436;
+    scale: 1.1;
+  }
+}
+
+#Termo .main {
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 3em;
+}
+
+#Termo .Board {
+  display: grid;
+  grid-template-columns: repeat(5, 1em);
+  gap: .0625em;
+  font-size: 1em;
+  grid-auto-rows: 1em;
+  line-height: 0;
+}
+
+#Termo .Board .letter {
+  font-weight: 600;
+  font-family: 'Mitr', sans-serif;
+  color: #FAFAFF;
+  background-color: #615458;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .65em;
+  line-height: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#Termo .Board .letter.active {
+  background-color: transparent;
+  border: .125em solid var(--_clr-border);
+}
+
+#Termo .Board .letter.selected {
+  border-bottom: .25em solid var(--_clr-border) !important;
+}
+
+#Termo .Board .letter.correct {
+  background-color: var(--_clr-correct);
+}
+
+#Termo .Board .letter.present {
+  background-color: var(--_clr-present);
+}
+
+#Termo .Board .letter.absent {
+  background-color: var(--_clr-absent);
+}
+
+#Termo .Board button {
+  border: .125em solid var(--_clr-border);
+  grid-column: 1 / span 5;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: .65em;
+  background-color: #615458;
+  color: #FAFAFF;
+  line-height: 1em;
+  transition: .3s;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+#Termo .Keyboard {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(32, 1fr);
+  max-width: 720px;
+  gap: .25em;
+  margin: 1rem auto;
+  height: min(100em / 2.15, 15vh);
+  user-select: none;
+}
+
+#Termo .Keyboard button {
+  outline: none;
+  background-color: var(--_clr-border);
+  grid-column: span 3;
+  display: flex;
+  font-size: 1.2rem;
+  line-height: 1em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: 'Mitr', sans-serif;
+  cursor: pointer;
+  border: none;
+  color: #FAFAFF;
+  text-transform: uppercase;
+}
+
+#Termo .Keyboard button.a {
+  grid-column: 2 / span 3;
+}
+
+#Termo .Keyboard button.z {
+  grid-column: 3 / span 3;
+}
+
+#Termo .Keyboard button.backspace {
+  grid-column: 30 / span 3;
+}
+
+#Termo .Keyboard button.enter {
+  grid-column: 25 / span 8;
+}
+
+#Termo .EndMessage {
+  background-color: var(--_clr-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#Termo .EndMessage h3 {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Mitr';
+  font-weight: 400;
+}
+
+#Termo .EndMessage button.close {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  border: none;
+  background-color: transparent;
+  color: #fafaff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .3s;
+  outline: none;
+
+  &:hover {
+    scale: 1.1;
+    rotate: 360deg;
+  }
+}
+
+#Termo .EndMessage button.ok {
+  padding: .5rem 1rem;
+  background-color: var(--_clr-correct);
+  width: fit-content;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+  color: #fafaff;
+  font-size: 1rem;
+
+  &:hover {
+    scale: 1.1;
   }
 }
 
