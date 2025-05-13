@@ -3,14 +3,10 @@ import React from 'react'
 const Hover2 = () => {
     return (
         <>
-            <h1>Hover 2</h1>
-
-            <section id="Hover2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </>
     )
 }

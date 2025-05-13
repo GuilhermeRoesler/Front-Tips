@@ -40,10 +40,7 @@ const ImageGallery2 = () => {
 
     return (
         <>
-            <h1 onClick={handleReflect}>Image Gallery 2</h1>
-            <section id="ImageGallery2">
-                {cards}
-            </section>
+            {cards}
         </>
     )
 }

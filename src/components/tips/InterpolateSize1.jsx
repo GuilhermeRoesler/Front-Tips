@@ -6,17 +6,14 @@ const InterpolateSize1 = () => {
 
     return (
         <>
-            <h1>Interpolate Size 1</h1>
-            <section id="InterpolateSize1">
-                <div>
-                    <button onClick={handleOpen}>Click me</button>
-                    <div ref={divRef}>
-                        <h2>Transitioning to height auto</h2>
-                        <p>It's easy to animate and transition to height auto now!</p>
-                        <p>Who would have thought it would be so easy!</p>
-                    </div>
+            <div>
+                <button onClick={handleOpen}>Click me</button>
+                <div ref={divRef}>
+                    <h2>Transitioning to height auto</h2>
+                    <p>It's easy to animate and transition to height auto now!</p>
+                    <p>Who would have thought it would be so easy!</p>
                 </div>
-            </section>
+            </div>
         </>
     )
 }

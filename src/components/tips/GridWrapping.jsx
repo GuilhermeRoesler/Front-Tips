@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const GridWrapping = () => {
-    const gridWrappingRef = useRef(null)
     const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 600px)").matches)
-    const [gridWidth, setGridWidth] = useState('75%')
+    // const [gridWidth, setGridWidth] = useState('75%')
 
     useEffect(() => {
         const handleResize = e => {
@@ -51,10 +50,7 @@ const GridWrapping = () => {
 
     return (
         <>
-            <h1 onClick={handlePreview}>Grid Wrapping</h1>
-            <section ref={gridWrappingRef} id="GridWrapping" style={{ width: gridWidth }}>
-                {cards}
-            </section>
+            {cards}
         </>
     )
 }

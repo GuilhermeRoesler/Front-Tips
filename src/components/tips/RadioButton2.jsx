@@ -28,12 +28,9 @@ const RadioButton2 = () => {
 
     return (
         <>
-            <h1>Radio Button 2</h1>
-            <section id="RadioButton2">
-                <form>
-                    {cards}
-                </form>
-            </section>
+            <form>
+                {cards}
+            </form>
         </>
     )
 }

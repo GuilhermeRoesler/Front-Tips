@@ -26,10 +26,7 @@ const options = {
 const ChartJS = () => {
     return (
         <>
-            <h1>ChartJS</h1>
-            <section id='ChartJS'>
             <Bar data={data} options={options} />
-            </section>
         </>
     )
 }

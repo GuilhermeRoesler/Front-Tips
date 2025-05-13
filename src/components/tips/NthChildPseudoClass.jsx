@@ -22,16 +22,11 @@ const NthChildPseudoClass = () => {
     }, [TOTAL_CLASSES])
 
     return (
-        <>
-            <h1>:nth-child() Pseudo-Class</h1>
-            <section className={activeClass} id="NthChildPseudoClass">
-                <div>
-                    {[...Array(15)].map((_, i) => (
-                        <div key={i} className='item'>{i + 1}</div>
-                    ))}
-                </div>
-            </section>
-        </>
+        <div className={activeClass}>
+            {[...Array(15)].map((_, i) => (
+                <div key={i} className='item'>{i + 1}</div>
+            ))}
+        </div>
     )
 }
 

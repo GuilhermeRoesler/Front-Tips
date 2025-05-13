@@ -112,19 +112,16 @@ const TodoList = () => {
 
     return (
         <>
-            <h1>TODO List</h1>
-            <section id='TodoList'>
-                <div className='card'>
-                    <ul>
-                        {items}
-                    </ul>
-                    <button onClick={handleOpen}><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#c9c9c9"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg></button>
-                    <dialog onClick={handleClickOutside} ref={dialogRef}>
-                        <input ref={inputRef} type='text'></input>
-                        <button onClick={handleAdding}><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#c9c9c9"><path d="M759.74-450.92 183.85-208.77q-15.77 6.41-29.81-2.45T140-237.05V-723.2q0-16.72 14.04-25.58t29.81-2.71l575.89 242.41q18.92 8.11 18.92 29.08t-18.92 29.08ZM190.26-266.87 698.36-480l-508.1-214.62v161.24L408.25-480l-217.99 52.31v160.82Zm0 0v-427.75 427.75Z" /></svg></button>
-                    </dialog>
-                </div>
-            </section>
+            <div className='card'>
+                <ul>
+                    {items}
+                </ul>
+                <button onClick={handleOpen}><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#c9c9c9"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg></button>
+                <dialog onClick={handleClickOutside} ref={dialogRef}>
+                    <input ref={inputRef} type='text'></input>
+                    <button onClick={handleAdding}><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem" fill="#c9c9c9"><path d="M759.74-450.92 183.85-208.77q-15.77 6.41-29.81-2.45T140-237.05V-723.2q0-16.72 14.04-25.58t29.81-2.71l575.89 242.41q18.92 8.11 18.92 29.08t-18.92 29.08ZM190.26-266.87 698.36-480l-508.1-214.62v161.24L408.25-480l-217.99 52.31v160.82Zm0 0v-427.75 427.75Z" /></svg></button>
+                </dialog>
+            </div>
         </>
     )
 }
